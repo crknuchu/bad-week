@@ -9,7 +9,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ifvps"]
 shader = ExtResource("2_rnbs1")
-shader_parameter/strength = 0.324
+shader_parameter/strength = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vwjx"]
 size = Vector3(1, 0.644775, 2.17236)

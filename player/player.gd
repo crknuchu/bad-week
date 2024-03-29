@@ -13,6 +13,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var hud: CanvasLayer = $HUD
 @onready var interact_label: Label = $HUD/InteractLabel
 @onready var attack_hitbox: Area3D = $AttackHitbox
+@onready var blood_hp_indicator: ColorRect = $HUD/Blood
 @onready var health: float = max_health
 
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu6w4olf04h6k"
-path="res://.godot/imported/policasafijokama_rosewood_veneer1_ao_1k.jpg-fbf126da408b9b162e5c129036a1ed78.ctex"
+path="res://.godot/imported/policasafijokama_rosewood_veneer1_ao_1k.jpg-a90a120319bfb69abd014c2223007964.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/policasafijokama_rosewood_veneer1_ao_1k.jpg"
-dest_files=["res://.godot/imported/policasafijokama_rosewood_veneer1_ao_1k.jpg-fbf126da408b9b162e5c129036a1ed78.ctex"]
+source_file="res://textures/policasafijokama_rosewood_veneer1_ao_1k.jpg"
+dest_files=["res://.godot/imported/policasafijokama_rosewood_veneer1_ao_1k.jpg-a90a120319bfb69abd014c2223007964.ctex"]
 
 [params]
 

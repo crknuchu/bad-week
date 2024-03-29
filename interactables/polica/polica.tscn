@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cda2v0dih0t1q"]
 
-[ext_resource type="Texture2D" uid="uid://7w0ancw76trw" path="res://models/policasafijokama_rosewood_veneer1_diff_1k.jpg" id="1_qemw2"]
+[ext_resource type="Texture2D" uid="uid://7w0ancw76trw" path="res://textures/policasafijokama_rosewood_veneer1_diff_1k.jpg" id="1_qemw2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wl0n3"]
 resource_name = "Drvo1"
