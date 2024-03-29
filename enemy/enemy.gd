@@ -4,12 +4,13 @@ extends CharacterBody3D
 
 const SPEED = 4.0
 
-@export var attack_range = 2.0
-@export var attack_cooldown = 3.0
-@export var follow_range = 10.0
-@export var damage = 20.0
-@export var health = 100.0
+@export var attack_range: float = 2.0
+@export var attack_cooldown: float = 3.0
+@export var follow_range: float = 10.0
+@export var damage: float = 20.0
+@export var max_health: float = 5.0
 
+@onready var health: float = max_health
 
 func _ready():
 	set_physics_process(false)
@@ -40,10 +41,10 @@ func should_follow():
 	return global_position.distance_to(Global.player.global_position) < follow_range \
 		and not should_attack()
 	
-func hit(damage):
-	health -= damage
+func hit():
+	health -= 1
 	if is_dead():
-		die();
+		die()
 	
 func attack(damage):
 	Global.player.hit(damage)

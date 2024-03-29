@@ -20,6 +20,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Global.player = self
+	_update_blood_hp_indicator()
 
 
 func _physics_process(delta):
@@ -39,8 +40,12 @@ func _process_interacting():
 
 func _process_input():
 	if Input.is_action_just_pressed("attack"):
-		for body in attack_hitbox.get_overlapping_bodies():
-			body.hit()
+		attack()
+
+
+func attack():
+	for body in attack_hitbox.get_overlapping_bodies():
+		body.hit()
 
 
 func _process_movement(delta):
@@ -74,9 +79,18 @@ func interact():
 
 func hit(damage: float):
 	health -= damage
+	_update_blood_hp_indicator()
 	if health <= 0:
 		death()
 
 
+func heal(amount: float):
+	health += amount
+
+
 func death():
 	pass
+
+
+func _update_blood_hp_indicator():
+	blood_hp_indicator.material.set("shader_parameter/strength",1.0-health/max_health)

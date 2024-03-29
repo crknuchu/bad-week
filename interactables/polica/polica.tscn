@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cda2v0dih0t1q"]
+[gd_scene load_steps=17 format=3 uid="uid://cda2v0dih0t1q"]
 
 [ext_resource type="Texture2D" uid="uid://7w0ancw76trw" path="res://textures/policasafijokama_rosewood_veneer1_diff_1k.jpg" id="1_qemw2"]
 
@@ -113,7 +113,13 @@ func on_interact(player):
 "
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nheyn"]
-size = Vector3(0.491821, 0.243774, 0.791138)
+size = Vector3(0.491821, 0.0130003, 0.791138)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8b75x"]
+size = Vector3(0.0360716, 0.255401, 0.791138)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u6tg7"]
+size = Vector3(0.452866, 0.255401, 0.0308229)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_euad4"]
 resource_name = "Drvo2"
@@ -242,6 +248,7 @@ mesh = SubResource("ArrayMesh_rrfdb")
 skeleton = NodePath("")
 
 [node name="GoreFijoka" type="MeshInstance3D" parent="policasafijokama"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_g306a")
 skeleton = NodePath("")
 
@@ -251,36 +258,84 @@ collision_mask = 2
 script = SubResource("GDScript_r3fxp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="policasafijokama/GoreFijoka/Interactable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0921021, 0.693542, -0.0055542)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0921021, 0.578155, -0.0055542)
 shape = SubResource("BoxShape3D_nheyn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="policasafijokama/GoreFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319977, 0.699356, -0.0055542)
+shape = SubResource("BoxShape3D_8b75x")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="policasafijokama/GoreFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.093524, 0.699356, -0.0055542)
+shape = SubResource("BoxShape3D_8b75x")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="policasafijokama/GoreFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11158, 0.699356, 0.374603)
+shape = SubResource("BoxShape3D_u6tg7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="policasafijokama/GoreFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11158, 0.699356, -0.376672)
+shape = SubResource("BoxShape3D_u6tg7")
 
 [node name="SrednjaFijoka" type="MeshInstance3D" parent="policasafijokama"]
 mesh = SubResource("ArrayMesh_1l3a1")
 skeleton = NodePath("")
 
 [node name="Interactable" type="StaticBody3D" parent="policasafijokama/SrednjaFijoka"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.260332, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.254517, 0)
 collision_layer = 5
 collision_mask = 2
 script = SubResource("GDScript_r3fxp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="policasafijokama/SrednjaFijoka/Interactable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0921021, 0.693542, -0.0055542)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0921021, 0.578155, -0.0055542)
 shape = SubResource("BoxShape3D_nheyn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="policasafijokama/SrednjaFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319977, 0.699356, -0.0055542)
+shape = SubResource("BoxShape3D_8b75x")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="policasafijokama/SrednjaFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.093524, 0.699356, -0.0055542)
+shape = SubResource("BoxShape3D_8b75x")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="policasafijokama/SrednjaFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11158, 0.699356, 0.374603)
+shape = SubResource("BoxShape3D_u6tg7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="policasafijokama/SrednjaFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11158, 0.699356, -0.376672)
+shape = SubResource("BoxShape3D_u6tg7")
 
 [node name="DoleFijoka" type="MeshInstance3D" parent="policasafijokama"]
 mesh = SubResource("ArrayMesh_idkx2")
 skeleton = NodePath("")
 
 [node name="Interactable" type="StaticBody3D" parent="policasafijokama/DoleFijoka"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.542739, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.527177, 0)
 collision_layer = 5
 collision_mask = 2
 script = SubResource("GDScript_r3fxp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="policasafijokama/DoleFijoka/Interactable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0921021, 0.693542, -0.0055542)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0921021, 0.578155, -0.0055542)
 shape = SubResource("BoxShape3D_nheyn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="policasafijokama/DoleFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319977, 0.699356, -0.0055542)
+shape = SubResource("BoxShape3D_8b75x")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="policasafijokama/DoleFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.093524, 0.699356, -0.0055542)
+shape = SubResource("BoxShape3D_8b75x")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="policasafijokama/DoleFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11158, 0.699356, 0.374603)
+shape = SubResource("BoxShape3D_u6tg7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="policasafijokama/DoleFijoka/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11158, 0.699356, -0.376672)
+shape = SubResource("BoxShape3D_u6tg7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11084, 0.565982, -0.00280762)

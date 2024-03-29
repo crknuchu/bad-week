@@ -1,13 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://bglh3swar8w2a"]
 
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_2ea2e"]
-[ext_resource type="Script" path="res://enemy/state_machine_fsm.gd" id="2_c2702"]
+[ext_resource type="Script" path="res://enemy/state_machine_fsm.gd" id="2_tyixo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_83dd4"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_el6j2"]
 
 [node name="Enemy" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 3
 script = ExtResource("1_2ea2e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -20,4 +22,4 @@ mesh = SubResource("CylinderMesh_el6j2")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="State Machine" type="Node" parent="."]
-script = ExtResource("2_c2702")
+script = ExtResource("2_tyixo")
