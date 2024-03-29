@@ -11,6 +11,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var interact_raycast: RayCast3D = $Camera3D/InteractRaycast
 @onready var hud: CanvasLayer = $HUD
 @onready var interact_label: Label = $HUD/InteractLabel
+@onready var attack_hitbox: Area3D = $AttackHitbox
 
 
 func _ready():
@@ -19,6 +20,7 @@ func _ready():
 
 func _physics_process(delta):
 	_process_movement(delta)
+	_process_input()
 
 
 func _process(delta):
@@ -29,6 +31,12 @@ func _process_interacting():
 	interact_label.visible = interact_raycast.is_colliding()
 	if Input.is_action_just_pressed("interact") and interact_raycast.is_colliding():
 		interact()
+
+
+func _process_input():
+	if Input.is_action_just_pressed("attack"):
+		for body in attack_hitbox.get_overlapping_bodies():
+			body.hit()
 
 
 func _process_movement(delta):
