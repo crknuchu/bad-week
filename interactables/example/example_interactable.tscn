@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg2aj7wkb5qft"]
+[gd_scene load_steps=5 format=3 uid="uid://bg2aj7wkb5qft"]
 
 [ext_resource type="Script" path="res://interactables/example/example_interactable.gd" id="1_0dwdb"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ni1vw"]
+
 [sub_resource type="SphereMesh" id="SphereMesh_hjxv4"]
+material = SubResource("StandardMaterial3D_ni1vw")
 radius = 0.245
 height = 0.35
 radial_segments = 5

@@ -1,17 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://b33ffx2tmr73u"]
+[gd_scene load_steps=7 format=3 uid="uid://b33ffx2tmr73u"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_q11nt"]
+[ext_resource type="Shader" path="res://player/player.gdshader" id="2_rnbs1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_66e3y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rhu50"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ifvps"]
+shader = ExtResource("2_rnbs1")
+shader_parameter/strength = 0.324
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vwjx"]
 size = Vector3(1, 0.644775, 2.17236)
 
 [node name="Player" type="CharacterBody3D"]
+collision_layer = 2
 script = ExtResource("1_q11nt")
-sensitivity = null
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -31,7 +36,6 @@ target_position = Vector3(0, 0, -3)
 collision_mask = 4
 hit_from_inside = true
 collide_with_areas = true
-collide_with_bodies = false
 debug_shape_custom_color = Color(1, 0.0470588, 0.317647, 1)
 
 [node name="HUD" type="CanvasLayer" parent="."]
@@ -59,6 +63,15 @@ offset_left = -4.0
 offset_top = -6.0
 offset_right = 4.0
 offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Blood" type="ColorRect" parent="HUD"]
+material = SubResource("ShaderMaterial_ifvps")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2

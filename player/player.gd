@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody3D
 
 @export var sensitivity: float = 0.2
+@export var max_health: float = 100
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -12,6 +13,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var hud: CanvasLayer = $HUD
 @onready var interact_label: Label = $HUD/InteractLabel
 @onready var attack_hitbox: Area3D = $AttackHitbox
+@onready var health: float = max_health
 
 
 func _ready():
@@ -67,3 +69,13 @@ func _unhandled_input(event):
 func interact():
 	var interactable: Interactable = interact_raycast.get_collider()
 	interactable.on_interact(self)
+
+
+func hit(damage: float):
+	health -= damage
+	if health <= 0:
+		death()
+
+
+func death():
+	pass

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bglh3swar8w2a"]
 
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_2ea2e"]
-[ext_resource type="Script" path="res://enemy/StateMachineFSM.gd" id="2_c2702"]
+[ext_resource type="Script" path="res://enemy/state_machine_fsm.gd" id="2_c2702"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_83dd4"]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://em6vppsi3l2s"]
+[gd_scene load_steps=8 format=3 uid="uid://em6vppsi3l2s"]
 
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="1_evm2o"]
 [ext_resource type="PackedScene" uid="uid://bg2aj7wkb5qft" path="res://interactables/example/example_interactable.tscn" id="2_q2bit"]
+[ext_resource type="PackedScene" uid="uid://cda2v0dih0t1q" path="res://interactables/polica/polica.tscn" id="3_h8itl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_85ekh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -45,3 +46,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25901, 0)
 
 [node name="ExampleInteractable" parent="." instance=ExtResource("2_q2bit")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.14633, 1.92761, 0.0236257)
+
+[node name="Polica" parent="." instance=ExtResource("3_h8itl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.20365, 1.95235, 0.3575)
