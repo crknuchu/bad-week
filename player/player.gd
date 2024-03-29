@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 @export var sensitivity: float = 0.2
@@ -7,6 +8,9 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var camera: Camera3D = $Camera3D
+@onready var interact_raycast: RayCast3D = $Camera3D/InteractRaycast
+@onready var hud: CanvasLayer = $HUD
+@onready var interact_label: Label = $HUD/InteractLabel
 
 
 func _ready():
@@ -14,7 +18,20 @@ func _ready():
 
 
 func _physics_process(delta):
-	
+	_process_movement(delta)
+
+
+func _process(delta):
+	_process_interacting()
+
+
+func _process_interacting():
+	interact_label.visible = interact_raycast.is_colliding()
+	if Input.is_action_just_pressed("interact") and interact_raycast.is_colliding():
+		interact()
+
+
+func _process_movement(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 		
@@ -36,4 +53,8 @@ func _unhandled_input(event):
 		camera.rotate_x(-sensitivity*event.relative.y/100.0)
 		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
 		rotate_y(-sensitivity*event.relative.x/100.0)
-		
+
+
+func interact():
+	var interactable: Interactable = interact_raycast.get_collider()
+	interactable.on_interact(self)
