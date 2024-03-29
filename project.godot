@@ -14,6 +14,10 @@ config/name="egj2024"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+State="*res://global/state.gd"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
