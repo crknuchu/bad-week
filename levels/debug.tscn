@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://em6vppsi3l2s"]
+
+[ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="1_evm2o"]
+
+[node name="Debug" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.463715, 0.713806, 0.373047)
+size = Vector3(6.52289, 2.42761, 1.74609)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02998, 1.45357, 0.407534)
+operation = 2
+size = Vector3(2.11211, 2.42761, 0.828003)
+
+[node name="Player" parent="." instance=ExtResource("1_evm2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91693, 0)
