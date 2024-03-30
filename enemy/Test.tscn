@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bpp7sb1tnn231" path="res://interactables/sleeping_pills/sleeping_pills.tscn" id="8_g2h5w"]
 [ext_resource type="PackedScene" uid="uid://c8fpp5wnbkm35" path="res://interactables/key/key.tscn" id="9_uopxa"]
 [ext_resource type="PackedScene" uid="uid://bgx27whg5yfrc" path="res://non_interactables/house/house.tscn" id="11_oij6w"]
-[ext_resource type="PackedScene" uid="uid://cyx08if5nltpm" path="res://non_interactables/chain_fence.tscn" id="12_m8b2r"]
+[ext_resource type="PackedScene" path="res://non_interactables/chain_fence.tscn" id="12_m8b2r"]
 [ext_resource type="PackedScene" uid="uid://cqc6bxv4jdsoa" path="res://non_interactables/tree/tree.tscn" id="13_gu0ae"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_74l7n"]

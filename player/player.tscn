@@ -17,6 +17,7 @@ shader_parameter/strength = 1.0
 size = Vector3(1, 0.644775, 2.17236)
 
 [node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
 collision_layer = 2
 script = ExtResource("1_q11nt")
 
@@ -41,9 +42,10 @@ collide_with_areas = true
 debug_shape_custom_color = Color(1, 0.0470588, 0.317647, 1)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
-light_energy = 6.125
-spot_range = 56.3015
-spot_angle = 55.33
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29514e-09, 0.0262533, 0)
+light_energy = 8.792
+spot_range = 356.504
+spot_angle = 22.79
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -83,8 +85,7 @@ material = SubResource("ShaderMaterial_ifvps")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 2.0
+offset_left = -1.0
 offset_right = 1.0
 offset_bottom = 2.0
 grow_horizontal = 2
