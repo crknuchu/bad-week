@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://ci8o8q3e6dsk"]
 
-[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemies/enemy/enemy.tscn" id="1_2bis8"]
+[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_2bis8"]
 [ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="1_x87e8"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_eav7x"]
 [ext_resource type="PackedScene" uid="uid://c7wqreduhy1da" path="res://interactables/exit_door/exit_door.tscn" id="3_b078n"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dcjnrknsnye48" path="res://non_interactables/computer/computer.tscn" id="14_25gjk"]
 [ext_resource type="PackedScene" uid="uid://qw3x263pkrsm" path="res://non_interactables/reso/Reso.tscn" id="15_203si"]
 [ext_resource type="PackedScene" uid="uid://bwgpwk18ixuvu" path="res://interactables/shovel_pickup/shovel_pickup.tscn" id="16_j4jwn"]
-[ext_resource type="PackedScene" uid="uid://cw6y5ntgyrxa3" path="res://enemies/rat/rat.tscn" id="17_fh6ll"]
+[ext_resource type="PackedScene" uid="uid://cw6y5ntgyrxa3" path="res://enemy/rat/rat.tscn" id="17_fh6ll"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_74l7n"]
 size = Vector3(30, 1, 30)
