@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dvcxlng7ckg1o" path="res://models/pacov.glb" id="2_qp0i4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3w1j6"]
-size = Vector3(1.87714, 2.20105, 13.4688)
+size = Vector3(23.8193, 20.863, 94.9096)
 
 [node name="Rat" instance=ExtResource("1_3ul8q")]
 transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, 0, 0, 0)
@@ -15,11 +15,11 @@ damage = 5.0
 max_health = 1.0
 
 [node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.169342, 0.600525, -3.91885)
+transform = Transform3D(0.0999988, 1.06982e-11, 4.07454e-10, 7.91622e-09, 0.1, -8.50379e-11, 2.08966e-08, -1.22953e-09, 0.0999979, -0.0876782, -1.17894, -2.00214)
 shape = SubResource("BoxShape3D_3w1j6")
 
 [node name="MeshInstance3D" parent="." index="1"]
 visible = false
 
 [node name="pacov" parent="." index="4" instance=ExtResource("2_qp0i4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22413, 2.38419e-07, -2.01987)
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -0.22413, 2.38419e-07, -2.01987)

@@ -7,6 +7,7 @@
 size = Vector3(1.31982, 2.52087, 3.29617)
 
 [node name="dog" instance=ExtResource("1_ryplj")]
+max_health = 1.0
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.159912, 1.33888, -0.0642548)
@@ -16,4 +17,4 @@ shape = SubResource("BoxShape3D_qpimr")
 visible = false
 
 [node name="ker" parent="." index="4" instance=ExtResource("2_pc2ur")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123246, 0, 0.0011096)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.123246, 0, 0.0011096)

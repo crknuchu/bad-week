@@ -4,12 +4,14 @@
 [ext_resource type="Script" path="res://enemies/enemy/state_machine_fsm.gd" id="2_tyixo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_83dd4"]
+radius = 0.441984
+height = 4.03027
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_el6j2"]
 
 [node name="Enemy" type="CharacterBody3D"]
 collision_layer = 8
-collision_mask = 3
+collision_mask = 11
 script = ExtResource("1_2ea2e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -20,6 +22,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754537, 0)
 mesh = SubResource("CylinderMesh_el6j2")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
 
 [node name="State Machine" type="Node" parent="."]
 script = ExtResource("2_tyixo")

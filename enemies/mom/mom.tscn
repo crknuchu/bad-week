@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr3x1ry71ujb5"]
+
+[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemies/enemy/enemy.tscn" id="1_2vin3"]
+[ext_resource type="PackedScene" uid="uid://x7wv7vj2s3tl" path="res://models/mama.glb" id="2_dkc5r"]
+
+[node name="Mom" instance=ExtResource("1_2vin3")]
+max_health = 1.0
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04436, 0)
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+
+[node name="mama" parent="." index="4" instance=ExtResource("2_dkc5r")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.00518, 3.15341, -0.388218)

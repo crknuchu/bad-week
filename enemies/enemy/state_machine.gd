@@ -15,11 +15,11 @@ var previous_state = null
 
 
 func _physics_process(delta):
-	if state != null:
-		_state_logic(delta)
-		var transition = _get_transition(delta)
-		if transition != null:
-			_set_state(transition)
+	#if state != null:
+	_state_logic(delta)
+	var transition = _get_transition(delta)
+	if transition != null:
+		_set_state(transition)
 
 
 func _state_logic(delta):

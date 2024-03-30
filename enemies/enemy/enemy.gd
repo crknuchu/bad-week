@@ -25,11 +25,11 @@ func _physics_process(delta):
 
 
 func follow():
-	velocity = Vector3.ZERO	
+	#velocity = Vector3.ZERO
 	nav_agent.set_target_position(Global.player.global_position)
 	var next_nav_point = nav_agent.get_next_path_position()
-	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
-	
+	velocity = (next_nav_point - global_position).normalized() * SPEED
+	#global_transform.origin
 	look_at(Global.player.global_position + Vector3(0,0.75,0),Vector3.UP,true)
 	#mora ovako inace se cudno rotiraju po y osi
 	move_and_slide()
@@ -47,8 +47,9 @@ func should_follow():
 func hit():
 	health -= 1
 	var instance = blood_splatter.instantiate()
-	instance.position = Vector3(self.global_position.x,0.51,self.global_position.z)
-	parent.add_child(instance)
+	instance.position = global_position-Vector3(0.0,0.0,2.9)#Vector3(self.global_position.x,0.51,self.global_position.z)
+	instance.rotation_degrees.y = randf()*360.0
+	get_tree().current_scene.add_child(instance)
 	
 	if is_dead():
 		die()
