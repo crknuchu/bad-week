@@ -4,6 +4,7 @@ extends CharacterBody3D
 @export var sensitivity: float = 0.6
 @export var max_health: float = 100
 var has_key = false
+var has_pills = false
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -102,3 +103,7 @@ func _update_blood_hp_indicator():
 
 func pick_up_key():
 	has_key = true
+	
+	
+func take_pills():
+	has_pills = true

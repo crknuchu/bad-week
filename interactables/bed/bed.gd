@@ -6,5 +6,6 @@ func _ready():
 	bed.interacted.connect(on_bed_interacted)
 	
 func on_bed_interacted():
-	print("sleep")
+	if (Global.player.has_pills):
+		print("sleep")
 	#start fade to black and load next level
