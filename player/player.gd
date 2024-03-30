@@ -20,10 +20,10 @@ var gravity = 30.0
 @onready var interact_raycast: RayCast3D = $Camera3D/InteractRaycast
 @onready var hud: CanvasLayer = $HUD
 @onready var interact_label: Label = $HUD/InteractLabel
-@onready var attack_hitbox: Area3D = $AttackHitbox
+@onready var attack_hitbox: Area3D = $Camera3D/AttackHitbox
 @onready var blood_hp_indicator: ColorRect = $HUD/Blood
 @onready var health: float = max_health
-@onready var blood_particle = $BloodParticle
+@onready var blood_particle = $Camera3D/BloodParticle
 @onready var shovel_animationplayer = $Camera3D/Shovel/AnimationPlayer
 @onready var shovel: Node3D = $Camera3D/Shovel
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bglh3swar8w2a"]
 
-[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_2ea2e"]
-[ext_resource type="Script" path="res://enemy/state_machine_fsm.gd" id="2_tyixo"]
+[ext_resource type="Script" path="res://enemies/enemy/enemy.gd" id="1_2ea2e"]
+[ext_resource type="Script" path="res://enemies/enemy/state_machine_fsm.gd" id="2_tyixo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_83dd4"]
 
