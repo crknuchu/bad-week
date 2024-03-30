@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody3D
 
-@export var sensitivity: float = 0.2
+@export var sensitivity: float = 0.6
 @export var max_health: float = 100
 var has_key = false
 

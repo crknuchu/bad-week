@@ -22,9 +22,10 @@ Global="*res://global/global.gd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
-window/stretch/mode="canvas_items"
+window/size/viewport_width=320
+window/size/viewport_height=240
+window/size/mode=3
+window/stretch/mode="viewport"
 
 [input]
 
