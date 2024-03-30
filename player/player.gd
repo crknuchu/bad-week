@@ -62,7 +62,6 @@ func attack():
 
 func deal_damage():
 	for body in attack_hitbox.get_overlapping_bodies():
-		#print(body)
 		body.hit()
 		blood_particle.emitting = true
 
