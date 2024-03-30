@@ -248,7 +248,6 @@ mesh = SubResource("ArrayMesh_rrfdb")
 skeleton = NodePath("")
 
 [node name="GoreFijoka" type="MeshInstance3D" parent="policasafijokama"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_g306a")
 skeleton = NodePath("")
 

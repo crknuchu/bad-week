@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ci8o8q3e6dsk"]
+[gd_scene load_steps=8 format=3 uid="uid://ci8o8q3e6dsk"]
 
 [ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_2bis8"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_eav7x"]
+[ext_resource type="PackedScene" uid="uid://c7wqreduhy1da" path="res://interactables/exit_door/exit_door.tscn" id="3_b078n"]
+[ext_resource type="PackedScene" uid="uid://cda2v0dih0t1q" path="res://interactables/polica/polica.tscn" id="4_eygjp"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_cynjl"]
 vertices = PackedVector3Array(-9.5, 1, -9.5, -9.5, 1, 9.5, 9.5, 1, 9.5, 9.5, 1, -9.5)
@@ -35,3 +37,9 @@ shape = SubResource("BoxShape3D_74l7n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Ground"]
 mesh = SubResource("BoxMesh_il57v")
+
+[node name="exit_door" parent="." instance=ExtResource("3_b078n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0979366, 0, 4.47535)
+
+[node name="Polica" parent="." instance=ExtResource("4_eygjp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.83963, 0, 7.23285)
