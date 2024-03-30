@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ci8o8q3e6dsk"]
+[gd_scene load_steps=22 format=3 uid="uid://ci8o8q3e6dsk"]
 
 [ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_2bis8"]
 [ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="1_x87e8"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" path="res://non_interactables/chain_fence.tscn" id="12_m8b2r"]
 [ext_resource type="PackedScene" uid="uid://cqc6bxv4jdsoa" path="res://non_interactables/tree/tree.tscn" id="13_gu0ae"]
 [ext_resource type="PackedScene" uid="uid://dcjnrknsnye48" path="res://non_interactables/computer/computer.tscn" id="14_25gjk"]
+[ext_resource type="PackedScene" uid="uid://qw3x263pkrsm" path="res://non_interactables/reso/Reso.tscn" id="15_203si"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_74l7n"]
 size = Vector3(30, 1, 30)
@@ -102,5 +103,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.24226, 0.5, 0.497162)
 
 [node name="Computer" parent="." instance=ExtResource("14_25gjk")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3.10817, 1.22541, 6.99782)
+
+[node name="Reso" parent="." instance=ExtResource("15_203si")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2444, 1.18478, 6.91385)
 
 [editable path="Polica"]
