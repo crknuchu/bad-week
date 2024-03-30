@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgu0k1t0nvl20"]
+
+[ext_resource type="Texture2D" uid="uid://dnsg7pdc558ki" path="res://textures/klipartz.com.png" id="1_h1h42"]
+
+[node name="BloodSplatter" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0)
+texture = ExtResource("1_h1h42")

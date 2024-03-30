@@ -1,6 +1,9 @@
 extends CharacterBody3D
 
 @onready var nav_agent = $NavigationAgent3D
+@onready var health: float = max_health
+@onready var blood_splatter = preload("res://non_interactables/blood_splatter/blood_splatter.tscn")
+@onready var parent = get_parent()
 
 const SPEED = 4.0
 
@@ -10,13 +13,11 @@ const SPEED = 4.0
 @export var damage: float = 20.0
 @export var max_health: float = 5.0
 
-@onready var health: float = max_health
 
 func _ready():
 	set_physics_process(false)
 	await get_tree().physics_frame
 	set_physics_process(true)
-
 
 func _physics_process(delta):
 	if not is_instance_valid(Global.player):
@@ -24,11 +25,13 @@ func _physics_process(delta):
 
 
 func follow():
-	velocity = Vector3.ZERO	
+	#velocity = Vector3.ZERO
 	nav_agent.set_target_position(Global.player.global_position)
 	var next_nav_point = nav_agent.get_next_path_position()
-	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
-	
+	velocity = (next_nav_point - global_position).normalized() * SPEED
+	#global_transform.origin
+	look_at(Global.player.global_position + Vector3(0,0.75,0),Vector3.UP,true)
+	#mora ovako inace se cudno rotiraju po y osi
 	move_and_slide()
 	
 func _process(delta):
@@ -43,6 +46,11 @@ func should_follow():
 	
 func hit():
 	health -= 1
+	var instance = blood_splatter.instantiate()
+	instance.position = global_position-Vector3(0.0,0.0,2.9)#Vector3(self.global_position.x,0.51,self.global_position.z)
+	instance.rotation_degrees.y = randf()*360.0
+	get_tree().current_scene.add_child(instance)
+	
 	if is_dead():
 		die()
 	
