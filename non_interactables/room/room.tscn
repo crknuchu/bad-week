@@ -75,7 +75,7 @@ spot_angle = 73.35
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.675334, 0, -1.57049)
 
 [node name="room_door" parent="soba" instance=ExtResource("8_hk2lu")]
-transform = Transform3D(0.0137867, 0, 0.299683, 0, 0.3, 0, -0.299683, 0, 0.0137867, -0.231016, -0.104585, 0.974657)
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.194633, -0.0125426, 1.08791)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="soba"]
 transform = Transform3D(1, -0.000139626, 0, 0.000139626, 1, 0, 0, 0, 1, -0.00137516, 1.23003, -0.524578)
