@@ -1,16 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://cnws67pcw6gka"]
+[gd_scene load_steps=15 format=3 uid="uid://cnws67pcw6gka"]
 
 [ext_resource type="Script" path="res://levels/tutorial_njiva/tutorial_njiva.gd" id="1_uny2e"]
+[ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="2_gqoi5"]
 [ext_resource type="Texture2D" uid="uid://bymc1chin4b2d" path="res://textures/wheat.png" id="2_lb0cw"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_x8dqy"]
 [ext_resource type="PackedScene" uid="uid://c7wqreduhy1da" path="res://interactables/exit_door/exit_door.tscn" id="4_2aj52"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i25ly"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7mq6y"]
+panorama = ExtResource("2_gqoi5")
 
 [sub_resource type="Sky" id="Sky_ltqln"]
-sky_material = SubResource("ProceduralSkyMaterial_i25ly")
+sky_material = SubResource("PanoramaSkyMaterial_7mq6y")
 
 [sub_resource type="Environment" id="Environment_3ek6t"]
 background_mode = 2
@@ -24,7 +24,7 @@ glow_hdr_threshold = 1.25
 glow_hdr_scale = 1.5
 glow_hdr_luminance_cap = 3.6
 glow_map_strength = 1.0
-fog_light_energy = 25.15
+fog_light_energy = 3.55
 volumetric_fog_density = 0.791
 volumetric_fog_albedo = Color(0.160784, 0.2, 0.109804, 1)
 volumetric_fog_emission_energy = 0.0

@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://ci8o8q3e6dsk"]
+[gd_scene load_steps=17 format=3 uid="uid://ci8o8q3e6dsk"]
 
 [ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_2bis8"]
+[ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="1_x87e8"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_eav7x"]
 [ext_resource type="PackedScene" uid="uid://c7wqreduhy1da" path="res://interactables/exit_door/exit_door.tscn" id="3_b078n"]
 [ext_resource type="PackedScene" uid="uid://cda2v0dih0t1q" path="res://interactables/polica/polica.tscn" id="4_eygjp"]
@@ -10,12 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://bpp7sb1tnn231" path="res://interactables/sleeping_pills/sleeping_pills.tscn" id="8_g2h5w"]
 [ext_resource type="PackedScene" uid="uid://c8fpp5wnbkm35" path="res://interactables/key/key.tscn" id="9_uopxa"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n13en"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_s5thd"]
+panorama = ExtResource("1_x87e8")
 
 [sub_resource type="Sky" id="Sky_4sr4b"]
-sky_material = SubResource("ProceduralSkyMaterial_n13en")
+sky_material = SubResource("PanoramaSkyMaterial_s5thd")
 
 [sub_resource type="Environment" id="Environment_wweo1"]
 background_mode = 2
