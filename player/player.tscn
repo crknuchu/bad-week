@@ -4,8 +4,10 @@
 [ext_resource type="Shader" path="res://player/player.gdshader" id="2_rnbs1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_66e3y"]
+radius = 0.3
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rhu50"]
+radius = 0.3
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ifvps"]
 shader = ExtResource("2_rnbs1")
@@ -15,6 +17,7 @@ shader_parameter/strength = 1.0
 size = Vector3(1, 0.644775, 2.17236)
 
 [node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
 collision_layer = 2
 script = ExtResource("1_q11nt")
 
