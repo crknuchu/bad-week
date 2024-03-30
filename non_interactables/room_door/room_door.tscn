@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn2mwyw5kqoib"]
+
+[ext_resource type="PackedScene" path="res://models/vrata.glb" id="1_x1phw"]
+
+[node name="room_door" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.413629)
+
+[node name="vrata" parent="." instance=ExtResource("1_x1phw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.293636, 0, 0.52953)

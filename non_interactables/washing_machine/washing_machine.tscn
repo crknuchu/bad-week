@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bh5ojdo1nqt7t"]
 
-[ext_resource type="Texture2D" uid="uid://dnfapiv7tjtbq" path="res://models/vesmasina_vesmasina.png" id="1_4jll3"]
+[ext_resource type="Texture2D" uid="uid://csce5is60lrmw" path="res://models/vesmasina_vesmasina.png" id="1_4jll3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hvui"]
 resource_name = "Material"
