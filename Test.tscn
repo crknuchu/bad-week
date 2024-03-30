@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c8qidkjekdcst"]
+[gd_scene load_steps=23 format=3 uid="uid://c8qidkjekdcst"]
 
 [ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="1_1b02v"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="3_7rhkb"]
@@ -16,10 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://qw3x263pkrsm" path="res://non_interactables/reso/Reso.tscn" id="15_qrh8j"]
 [ext_resource type="PackedScene" uid="uid://bwgpwk18ixuvu" path="res://interactables/shovel_pickup/shovel_pickup.tscn" id="16_rom8t"]
 [ext_resource type="PackedScene" uid="uid://bf2j4odbo7gxn" path="res://enemies/rat/rat.tscn" id="17_jr54y"]
-[ext_resource type="PackedScene" uid="uid://xx16qewpucxt" path="res://enemies/doctor/doctor.tscn" id="18_6djqy"]
-[ext_resource type="PackedScene" uid="uid://2gb6ohyshfdo" path="res://enemies/dog/dog.tscn" id="18_vbmuq"]
-[ext_resource type="PackedScene" uid="uid://dtv4xsbfixhv0" path="res://enemies/kid/kid.tscn" id="19_ivw4m"]
-[ext_resource type="PackedScene" uid="uid://cr3x1ry71ujb5" path="res://enemies/mom/mom.tscn" id="20_bh5uh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_74l7n"]
 size = Vector3(30, 1, 30)
@@ -110,23 +106,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2444, 1.18478, 6.91385)
 transform = Transform3D(0.999895, -0.0145206, 0, 0.0145206, 0.999895, 0, 0, 0, 1, -0.380412, 0.5, 9.56269)
 
 [node name="Rat" parent="." instance=ExtResource("17_jr54y")]
-transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, -5.47714, 0.5, 5.80198)
-collision_mask = 3
-
-[node name="dog" parent="." instance=ExtResource("18_vbmuq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93247, 0.5, 6.07092)
-collision_mask = 3
-
-[node name="doctor" parent="." instance=ExtResource("18_6djqy")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -3.28041, 0.5, 8.93726)
-collision_mask = 3
-
-[node name="Mom" parent="." instance=ExtResource("20_bh5uh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9975, 0.5, 9.63685)
-collision_mask = 3
-
-[node name="Kid" parent="." instance=ExtResource("19_ivw4m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7749, 4.50632, 4.15893)
-collision_mask = 3
+transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, -1.32768, 0.5, 12.463)
 
 [editable path="Polica"]

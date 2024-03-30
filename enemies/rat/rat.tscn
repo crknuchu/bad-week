@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bf2j4odbo7gxn"]
 
-[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemies/enemy/enemy.tscn" id="1_3ul8q"]
-[ext_resource type="PackedScene" uid="uid://dvcxlng7ckg1o" path="res://models/pacov.glb" id="2_qp0i4"]
+[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_3ul8q"]
+[ext_resource type="PackedScene" uid="uid://blumwkmxvodk5" path="res://models/pacov.glb" id="2_qp0i4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3w1j6"]
 size = Vector3(23.8193, 20.863, 94.9096)
@@ -22,4 +22,4 @@ shape = SubResource("BoxShape3D_3w1j6")
 visible = false
 
 [node name="pacov" parent="." index="4" instance=ExtResource("2_qp0i4")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -0.22413, 2.38419e-07, -2.01987)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22413, 2.39304e-07, -2.01987)
