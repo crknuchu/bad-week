@@ -111,5 +111,6 @@ transform = Transform3D(0.999895, -0.0145206, 0, 0.0145206, 0.999895, 0, 0, 0, 1
 
 [node name="Rat" parent="." instance=ExtResource("17_jr54y")]
 transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, -5.47714, 0.5, 5.80198)
+follow_range = 10.0
 
 [editable path="Polica"]

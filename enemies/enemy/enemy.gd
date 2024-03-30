@@ -29,8 +29,8 @@ func follow():
 	var next_nav_point = nav_agent.get_next_path_position()
 	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
 	
-	look_at(Global.player.global_position,Vector3(0,1,0),true)
-	
+	look_at(Global.player.global_position + Vector3(0,0.75,0),Vector3.UP,true)
+	#mora ovako inace se cudno rotiraju po y osi
 	move_and_slide()
 	
 func _process(delta):

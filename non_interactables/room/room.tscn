@@ -66,7 +66,7 @@ transform = Transform3D(1.70728, 0, 0, 0, 1.52251, 0, 0, 0, 1, 0, 1.19734, 1.007
 mesh = SubResource("QuadMesh_wc5ol")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="soba/Computer/MeshInstance3D"]
-transform = Transform3D(3.90485, 0, 0, 0, -4.36363, -0.363188, 0, 0.552959, -6.6437, 0, 0, -1.02901)
+transform = Transform3D(1, 0, 0, 0, -0.992066, -0.125715, 0, 0.125715, -0.992066, 0, 0, -1.02901)
 light_color = Color(0, 0.0588235, 1, 1)
 light_energy = 1.915
 spot_angle = 73.35
