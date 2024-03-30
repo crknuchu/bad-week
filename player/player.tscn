@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b33ffx2tmr73u"]
+[gd_scene load_steps=8 format=3 uid="uid://b33ffx2tmr73u"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_q11nt"]
 [ext_resource type="Shader" path="res://player/player.gdshader" id="2_rnbs1"]
+[ext_resource type="PackedScene" uid="uid://b4iesfs6ti5im" path="res://player/blood_particle.tscn" id="3_2jwvc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_66e3y"]
 radius = 0.3
@@ -99,3 +100,6 @@ collision_mask = 8
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackHitbox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.70152, -1.31639)
 shape = SubResource("BoxShape3D_5vwjx")
+
+[node name="BloodParticle" parent="." instance=ExtResource("3_2jwvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0796954, 1.71023, -2.15973)

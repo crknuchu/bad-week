@@ -17,7 +17,7 @@ var gravity = 30.0
 @onready var attack_hitbox: Area3D = $AttackHitbox
 @onready var blood_hp_indicator: ColorRect = $HUD/Blood
 @onready var health: float = max_health
-
+@onready var blood_particle = $BloodParticle
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -48,6 +48,8 @@ func _process_input():
 func attack():
 	for body in attack_hitbox.get_overlapping_bodies():
 		body.hit()
+		blood_particle.emitting = true
+		
 
 
 func _process_movement(delta):
