@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bgx27whg5yfrc"]
 
-[ext_resource type="Texture2D" path="res://models/kuca_ConcreteWornPaint0112_2_350.jpg" id="1_vspev"]
-[ext_resource type="Texture2D" path="res://models/kuca_rooftexture.jpg" id="2_lvf58"]
+[ext_resource type="Texture2D" uid="uid://ljgnbtdf67rs" path="res://models/kuca_ConcreteWornPaint0112_2_350.jpg" id="1_vspev"]
+[ext_resource type="Texture2D" uid="uid://ckne2wktqdtr0" path="res://models/kuca_rooftexture.jpg" id="2_lvf58"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8b03"]
 resource_name = "Material"

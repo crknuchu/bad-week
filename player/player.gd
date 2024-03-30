@@ -7,8 +7,8 @@ var has_key = false
 var has_pills = false
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+const JUMP_VELOCITY = 6.5
+var gravity = 30.0
 
 @onready var camera: Camera3D = $Camera3D
 @onready var interact_raycast: RayCast3D = $Camera3D/InteractRaycast

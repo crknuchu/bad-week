@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqc6bxv4jdsoa"]
 
-[ext_resource type="Texture2D" path="res://models/drvo_wood.jpg" id="1_uvodu"]
+[ext_resource type="Texture2D" uid="uid://bsdfgpofgds3x" path="res://models/drvo_wood.jpg" id="1_uvodu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfdw7"]
 resource_name = "Material.001"

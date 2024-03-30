@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyx08if5nltpm"]
 
-[ext_resource type="Texture2D" path="res://textures/Chain-Link-Fence-Features.png" id="1_jv1d2"]
+[ext_resource type="Texture2D" uid="uid://6k6etli8r7vd" path="res://textures/Chain-Link-Fence-Features.png" id="1_jv1d2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ws123"]
 transparency = 1
