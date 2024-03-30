@@ -1,5 +1,5 @@
 class_name Interactable
-extends Node3D
+extends PhysicsBody3D
 
 signal interacted
 
