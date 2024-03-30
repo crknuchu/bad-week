@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c7wqreduhy1da"]
+[gd_scene load_steps=24 format=3 uid="uid://c7wqreduhy1da"]
 
 [ext_resource type="Texture2D" uid="uid://5nmvjw5b3ld0" path="res://models/door_doorCol.png" id="1_7rk55"]
 [ext_resource type="Script" path="res://interactables/exit_door/exit_door.gd" id="1_xtncb"]
@@ -51,13 +51,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_uwrn3")
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xec53"]
+data = PackedVector3Array(0.8228, 3.5029, 0, -0.6443, 3.3323, 0, -0.8228, 3.5029, 0, 0.8228, 3.5029, 0, 0.6443, 3.3323, 0, -0.6443, 3.3323, 0, 0.6443, 3.3323, -0.1805, -0.8228, 3.5029, -0.1805, -0.6443, 3.3323, -0.1805, 0.6443, 3.3323, -0.1805, 0.8228, 3.5029, -0.1805, -0.8228, 3.5029, -0.1805, 0.8228, 0, 0, 0.6443, 3.3323, 0, 0.8228, 3.5029, 0, 0.8228, 0, 0, 0.6443, -0.0004, 0, 0.6443, 3.3323, 0, -0.6443, 3.3323, 0, 0.6443, 3.3323, -0.1805, -0.6443, 3.3323, -0.1805, -0.6443, 3.3323, 0, 0.6443, 3.3323, 0, 0.6443, 3.3323, -0.1805, 0.8228, 0, -0.1805, 0.6443, 3.3323, -0.1805, 0.6443, -0.0004, -0.1805, 0.8228, 0, -0.1805, 0.8228, 3.5029, -0.1805, 0.6443, 3.3323, -0.1805, 0.6443, 3.3323, 0, 0.6443, -0.0004, -0.1805, 0.6443, 3.3323, -0.1805, 0.6443, 3.3323, 0, 0.6443, -0.0004, 0, 0.6443, -0.0004, -0.1805, 0.8228, 0, 0, 0.8228, 3.5029, -0.1805, 0.8228, 0, -0.1805, 0.8228, 0, 0, 0.8228, 3.5029, 0, 0.8228, 3.5029, -0.1805, 0.8228, 3.5029, -0.1805, -0.8228, 3.5029, 0, -0.8228, 3.5029, -0.1805, 0.8228, 3.5029, -0.1805, 0.8228, 3.5029, 0, -0.8228, 3.5029, 0, -0.8228, 0, 0, -0.6443, 3.3323, 0, -0.6443, -0.0004, 0, -0.8228, 0, 0, -0.8228, 3.5029, 0, -0.6443, 3.3323, 0, -0.8228, 0, -0.1805, -0.6443, 3.3323, -0.1805, -0.8228, 3.5029, -0.1805, -0.8228, 0, -0.1805, -0.6443, -0.0004, -0.1805, -0.6443, 3.3323, -0.1805, -0.6443, 3.3323, 0, -0.6443, -0.0004, -0.1805, -0.6443, -0.0004, 0, -0.6443, 3.3323, 0, -0.6443, 3.3323, -0.1805, -0.6443, -0.0004, -0.1805, -0.8228, 0, 0, -0.8228, 3.5029, -0.1805, -0.8228, 3.5029, 0, -0.8228, 0, 0, -0.8228, 0, -0.1805, -0.8228, 3.5029, -0.1805)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kpie2"]
 resource_name = "prozor koji svetli u mraku i place dok ga macor juri kroz supu."
 cull_mode = 2
 albedo_color = Color(0, 0.108462, 0.906363, 1)
 roughness = 0.5
 emission_enabled = true
-emission = Color(1, 1, 1, 1)
+emission = Color(2, 2, 2, 1)
 emission_energy_multiplier = 11.1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x14ol"]
@@ -148,6 +151,10 @@ resource_name = "exit"
 cull_mode = 2
 albedo_texture = ExtResource("4_5mvog")
 roughness = 0.5
+emission_enabled = true
+emission = Color(0, 2, 0, 1)
+emission_energy_multiplier = 7.0
+emission_texture = ExtResource("4_5mvog")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fwhfe"]
 _surfaces = [{
@@ -181,7 +188,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fwhfe")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cna2o"]
+emission_enabled = true
+emission = Color(18.881, 10.49, 14.686, 1)
+emission_energy_multiplier = 4.1
+
+[sub_resource type="BoxMesh" id="BoxMesh_ahekg"]
+material = SubResource("StandardMaterial3D_cna2o")
+size = Vector3(1.335, 3.34, 0.06)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_13ljd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hwbmc"]
+size = Vector3(1, 3.50293, 0.217041)
 
 [node name="exit_door" type="Node3D"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
@@ -193,6 +212,11 @@ script = ExtResource("1_xtncb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.058173)
 mesh = SubResource("ArrayMesh_arqsg")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="door/okvir"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door/okvir/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_xec53")
 
 [node name="vRAT" type="MeshInstance3D" parent="door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.645243, -0.000360548, 0.027152)
@@ -211,6 +235,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.72925, 0)
 mesh = SubResource("ArrayMesh_k54yn")
 skeleton = NodePath("")
 
+[node name="beli" type="MeshInstance3D" parent="door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68806, -0.0535919)
+mesh = SubResource("BoxMesh_ahekg")
+
 [node name="Interactable" type="StaticBody3D" parent="."]
 collision_layer = 5
 collision_mask = 0
@@ -219,3 +247,14 @@ script = ExtResource("5_xdc45")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable"]
 transform = Transform3D(1.6, 0, 0, 0, 3, 0, 0, 0, 0.2, 0, 2, 0)
 shape = SubResource("BoxShape3D_13ljd")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74854, -0.156886)
+shape = SubResource("BoxShape3D_hwbmc")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
