@@ -16,7 +16,7 @@ albedo_texture = ExtResource("2_gbfq1")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka0ne"]
 resource_name = "Metal"
 cull_mode = 2
-albedo_color = Color(0.694118, 0.694118, 0.694118, 1)
+albedo_color = Color(0.933333, 0.933333, 0.933333, 1)
 albedo_texture = ExtResource("3_j5x55")
 roughness = 0.79
 

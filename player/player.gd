@@ -12,7 +12,7 @@ var has_pills: bool = false
 	get:
 		return has_shovel
 
-const SPEED = 5.0
+@export var movement_speed = 5.0
 const JUMP_VELOCITY = 6.5
 var gravity = 30.0
 
@@ -77,8 +77,8 @@ func _process_movement(delta):
 		"move_left", "move_right", "move_forward", "move_backward"
 		)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	velocity.x = direction.x * SPEED
-	velocity.z = direction.z * SPEED
+	velocity.x = direction.x * movement_speed
+	velocity.z = direction.z * movement_speed
 
 	move_and_slide()
 	

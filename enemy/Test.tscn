@@ -65,9 +65,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19162, 0.765786, -13.6815)
 
 [node name="Player" parent="." instance=ExtResource("2_eav7x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.599503, 10.5933)
-sensitivity = null
-max_health = null
-has_shovel = null
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_cynjl")
