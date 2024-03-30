@@ -1,6 +1,9 @@
 extends CharacterBody3D
 
 @onready var nav_agent = $NavigationAgent3D
+@onready var health: float = max_health
+@onready var blood_splatter = preload("res://non_interactables/blood_splatter/blood_splatter.tscn")
+@onready var parent = get_parent()
 
 const SPEED = 4.0
 
@@ -10,13 +13,11 @@ const SPEED = 4.0
 @export var damage: float = 20.0
 @export var max_health: float = 5.0
 
-@onready var health: float = max_health
 
 func _ready():
 	set_physics_process(false)
 	await get_tree().physics_frame
 	set_physics_process(true)
-
 
 func _physics_process(delta):
 	if not is_instance_valid(Global.player):
@@ -45,6 +46,10 @@ func should_follow():
 	
 func hit():
 	health -= 1
+	var instance = blood_splatter.instantiate()
+	instance.position = Vector3(self.global_position.x,0.51,self.global_position.z)
+	parent.add_child(instance)
+	
 	if is_dead():
 		die()
 	
