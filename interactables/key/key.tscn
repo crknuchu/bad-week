@@ -47,7 +47,7 @@ shadow_mesh = SubResource("ArrayMesh_yo5hc")
 [sub_resource type="BoxShape3D" id="BoxShape3D_lxk16"]
 size = Vector3(8.00879, 3.5271, 3.96289)
 
-[node name="key" type="Node3D"]
+[node name="Key" type="Node3D"]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.964044, 1)
 script = ExtResource("1_6ywuu")
 

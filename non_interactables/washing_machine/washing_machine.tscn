@@ -49,7 +49,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, -1)
 [node name="vesmasina" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
-[node name="Cube" type="MeshInstance3D" parent="vesmasina"]
+[node name="Cube" type="MeshInstance3D" parent="vesmasina" groups=["navmesh"]]
 mesh = SubResource("ArrayMesh_2t667")
 skeleton = NodePath("")
 

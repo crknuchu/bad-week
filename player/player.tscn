@@ -17,7 +17,6 @@ shader_parameter/strength = 1.0
 size = Vector3(1, 0.644775, 2.17236)
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
 collision_layer = 2
 script = ExtResource("1_q11nt")
 
