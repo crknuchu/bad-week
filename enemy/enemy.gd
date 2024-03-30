@@ -53,4 +53,4 @@ func die():
 	queue_free()
 	
 func is_dead():
-	return health < 0
+	return health <= 0

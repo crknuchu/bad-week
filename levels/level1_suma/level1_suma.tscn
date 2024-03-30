@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cuxa68ugtcppc"]
+[gd_scene load_steps=19 format=3 uid="uid://cuxa68ugtcppc"]
 
 [ext_resource type="Texture2D" uid="uid://ctscu5ge31gci" path="res://textures/grass.png" id="1_38s0k"]
 [ext_resource type="Texture2D" uid="uid://ry2vsqmrmr8u" path="res://textures/d84b1ed4-5589-44ce-8183-f4eacd95267b_scaled_jpg.png" id="1_fcx1a"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://chw107qet8jdu" path="res://interactables/bed/bed.tscn" id="7_qf5pl"]
 [ext_resource type="PackedScene" uid="uid://5di38cfhy27a" path="res://levels/level1_suma/walls.tscn" id="8_mfpgo"]
 [ext_resource type="PackedScene" uid="uid://cqc6bxv4jdsoa" path="res://non_interactables/tree/tree.tscn" id="8_sqqx3"]
+[ext_resource type="PackedScene" path="res://non_interactables/chain_fence.tscn" id="11_m5hf4"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sjht5"]
 panorama = ExtResource("1_fcx1a")
@@ -60,6 +61,9 @@ shape = SubResource("ConcavePolygonShape3D_erejc")
 
 [node name="Player" parent="." instance=ExtResource("2_pq7jn")]
 transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 28.3111, 0.500001, -6.1464)
+sensitivity = null
+max_health = null
+has_shovel = null
 
 [node name="Objects" type="Node3D" parent="."]
 
@@ -171,3 +175,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.1377, 0.500008, 24.2141)
 
 [node name="Tree27" parent="Trees" instance=ExtResource("8_sqqx3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.4905, 0.500008, 51.8605)
+
+[node name="ChainFence" parent="." instance=ExtResource("11_m5hf4")]
+transform = Transform3D(-0.171585, 0, -0.985169, 0, 1, 0, 0.985169, 0, -0.171585, 2.66277, 0.5, 16.7752)
+
+[node name="ChainFence2" parent="." instance=ExtResource("11_m5hf4")]
+transform = Transform3D(0.0613795, 0, 0.998115, 0, 1, 0, -0.998115, 0, 0.0613795, 2.916, 0.5, 13.9481)
+
+[node name="ChainFence3" parent="." instance=ExtResource("11_m5hf4")]
+transform = Transform3D(-0.106472, 0, -0.994316, 0, 1, 0, 0.994316, 0, -0.106472, 3.22732, 0.5, 11.0974)
+
+[node name="ChainFence4" parent="." instance=ExtResource("11_m5hf4")]
+transform = Transform3D(0.124727, 0, 0.992191, 0, 1, 0, -0.992191, 0, 0.124727, 3.58536, 0.5, 8.47835)
+
+[node name="ChainFence5" parent="." instance=ExtResource("11_m5hf4")]
+transform = Transform3D(0.10852, 0, -0.994094, 0, 1, 0, 0.994094, 0, 0.10852, 3.60066, 0.5, 5.60491)
+
+[node name="ChainFence6" parent="." instance=ExtResource("11_m5hf4")]
+transform = Transform3D(-0.19319, 0, -0.981161, 0, 1, 0, 0.981161, 0, -0.19319, 2.13928, 0.473367, 19.6892)
+
+[node name="ChainFence7" parent="." instance=ExtResource("11_m5hf4")]
+transform = Transform3D(0.143614, 0, 0.989634, 0, 1, 0, -0.989634, 0, 0.143614, 3.77588, 0.5, 2.83947)

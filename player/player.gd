@@ -3,8 +3,14 @@ extends CharacterBody3D
 
 @export var sensitivity: float = 0.6
 @export var max_health: float = 100
-var has_key = false
-var has_pills = false
+var has_key: bool = false
+var has_pills: bool = false
+@export var has_shovel: bool = false:
+	set(value):
+		shovel.visible = value
+		has_shovel = value
+	get:
+		return has_shovel
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 6.5
@@ -18,8 +24,11 @@ var gravity = 30.0
 @onready var blood_hp_indicator: ColorRect = $HUD/Blood
 @onready var health: float = max_health
 @onready var blood_particle = $BloodParticle
+@onready var shovel_animationplayer = $Camera3D/Shovel/AnimationPlayer
+@onready var shovel: Node3D = $Camera3D/Shovel
 
 func _ready():
+	shovel.visible = has_shovel
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Global.player = self
 	_update_blood_hp_indicator()
@@ -42,14 +51,19 @@ func _process_interacting():
 
 func _process_input():
 	if Input.is_action_just_pressed("attack"):
-		attack()
+		if not shovel_animationplayer.is_playing():
+			attack()
 
 
 func attack():
+	if has_shovel:
+		shovel_animationplayer.play("attack")
+
+
+func deal_damage():
 	for body in attack_hitbox.get_overlapping_bodies():
 		body.hit()
 		blood_particle.emitting = true
-		
 
 
 func _process_movement(delta):

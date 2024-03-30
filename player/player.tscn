@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b33ffx2tmr73u"]
+[gd_scene load_steps=9 format=3 uid="uid://b33ffx2tmr73u"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_q11nt"]
+[ext_resource type="PackedScene" uid="uid://bjodx7nngvsg7" path="res://non_interactables/shovel/shovel.tscn" id="2_2bp2a"]
 [ext_resource type="Shader" path="res://player/player.gdshader" id="2_rnbs1"]
 [ext_resource type="PackedScene" uid="uid://b4iesfs6ti5im" path="res://player/blood_particle.tscn" id="3_2jwvc"]
 
@@ -18,9 +19,11 @@ shader_parameter/strength = 1.0
 size = Vector3(1, 0.644775, 2.17236)
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
 collision_layer = 2
 script = ExtResource("1_q11nt")
+sensitivity = null
+max_health = null
+has_shovel = null
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -47,6 +50,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29514e-09, 0.0262533, 0)
 light_energy = 8.792
 spot_range = 356.504
 spot_angle = 22.79
+
+[node name="Shovel" parent="Camera3D" instance=ExtResource("2_2bp2a")]
+transform = Transform3D(-0.99141, -0.123552, -0.0429162, -0.130151, 0.899436, 0.417224, -0.0129485, 0.419226, -0.90779, 0.96988, -2.01963, -1.80998)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
