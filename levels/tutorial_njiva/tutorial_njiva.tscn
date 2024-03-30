@@ -81,7 +81,7 @@ mesh = SubResource("BoxMesh_4cc2k")
 skeleton = NodePath("../..")
 
 [node name="Player" parent="." instance=ExtResource("2_x8dqy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77262, 0.100002, 10.3106)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77262, 0.100002, 141.165)
 
 [node name="exit_door" parent="." instance=ExtResource("4_2aj52")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -1.6616, 0.0999999, 0.145887)

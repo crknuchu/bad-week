@@ -9,8 +9,9 @@ func _ready():
 	door.interacted.connect(on_door_interacted)
 	
 func on_door_interacted():
-	door_inside.open_door()
-	door.queue_free()
+	if(Global.player.has_key):
+		door_inside.open_door()
+		door.queue_free()
 
 
 func _on_area_3d_body_entered(body):

@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 @export var sensitivity: float = 0.2
 @export var max_health: float = 100
+var has_key = false
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -63,6 +64,9 @@ func _process_movement(delta):
 	velocity.z = direction.z * SPEED
 
 	move_and_slide()
+	
+	if position.y < -20.0:
+		death()
 
 
 func _unhandled_input(event):
@@ -89,8 +93,12 @@ func heal(amount: float):
 
 
 func death():
-	pass
+	print("umr8")
 
 
 func _update_blood_hp_indicator():
 	blood_hp_indicator.material.set("shader_parameter/strength",1.0-health/max_health)
+	
+
+func pick_up_key():
+	has_key = true
