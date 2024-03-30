@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ci8o8q3e6dsk"]
+[gd_scene load_steps=15 format=3 uid="uid://ci8o8q3e6dsk"]
 
 [ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_2bis8"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_eav7x"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dqlb5bda3pd0v" path="res://interactables/frizider/frizider.tscn" id="5_v6ac8"]
 [ext_resource type="PackedScene" uid="uid://bh5ojdo1nqt7t" path="res://non_interactables/washing_machine/washing_machine.tscn" id="6_8n43q"]
 [ext_resource type="PackedScene" uid="uid://chw107qet8jdu" path="res://interactables/bed/bed.tscn" id="7_s6s7s"]
+[ext_resource type="PackedScene" uid="uid://bpp7sb1tnn231" path="res://interactables/sleeping_pills/sleeping_pills.tscn" id="8_g2h5w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n13en"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -70,3 +71,6 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.676491, 0.5, 7.15512)
 
 [node name="bed" parent="." instance=ExtResource("7_s6s7s")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 2.7085, 0.5, 6.89735)
+
+[node name="sleeping_pills" parent="." instance=ExtResource("8_g2h5w")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.658663, 1.48135, 7.88262)
