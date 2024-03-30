@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://ci8o8q3e6dsk"]
+[gd_scene load_steps=13 format=3 uid="uid://ci8o8q3e6dsk"]
 
 [ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_2bis8"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_eav7x"]
 [ext_resource type="PackedScene" uid="uid://c7wqreduhy1da" path="res://interactables/exit_door/exit_door.tscn" id="3_b078n"]
 [ext_resource type="PackedScene" uid="uid://cda2v0dih0t1q" path="res://interactables/polica/polica.tscn" id="4_eygjp"]
 [ext_resource type="PackedScene" uid="uid://dqlb5bda3pd0v" path="res://interactables/frizider/frizider.tscn" id="5_v6ac8"]
+[ext_resource type="PackedScene" uid="uid://bh5ojdo1nqt7t" path="res://non_interactables/washing_machine/washing_machine.tscn" id="6_8n43q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n13en"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -61,4 +62,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49867, 0.499999, 3.24238)
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -3.25022, 0.5, 1.48274)
 
 [node name="frizider2" parent="." instance=ExtResource("5_v6ac8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.618378, 0.5, 5.88591)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.607194, 0.528989, 5.90036)
+
+[node name="washing_machine" parent="." instance=ExtResource("6_8n43q")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.676491, 0.5, 7.15512)
