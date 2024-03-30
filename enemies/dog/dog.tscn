@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://2gb6ohyshfdo"]
+
+[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemies/enemy/enemy.tscn" id="1_ryplj"]
+[ext_resource type="PackedScene" uid="uid://ddq02l8w7d8vc" path="res://models/ker.glb" id="2_pc2ur"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qpimr"]
+size = Vector3(1.31982, 2.52087, 3.29617)
+
+[node name="dog" instance=ExtResource("1_ryplj")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.159912, 1.33888, -0.0642548)
+shape = SubResource("BoxShape3D_qpimr")
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+
+[node name="ker" parent="." index="4" instance=ExtResource("2_pc2ur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123246, 0, 0.0011096)

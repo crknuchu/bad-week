@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c8qidkjekdcst"]
+[gd_scene load_steps=25 format=3 uid="uid://c8qidkjekdcst"]
 
 [ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="1_1b02v"]
 [ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemies/enemy/enemy.tscn" id="2_8s73p"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://qw3x263pkrsm" path="res://non_interactables/reso/Reso.tscn" id="15_qrh8j"]
 [ext_resource type="PackedScene" uid="uid://bwgpwk18ixuvu" path="res://interactables/shovel_pickup/shovel_pickup.tscn" id="16_rom8t"]
 [ext_resource type="PackedScene" uid="uid://bf2j4odbo7gxn" path="res://enemies/rat/rat.tscn" id="17_jr54y"]
+[ext_resource type="PackedScene" uid="uid://2gb6ohyshfdo" path="res://enemies/dog/dog.tscn" id="18_vbmuq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_74l7n"]
 size = Vector3(30, 1, 30)
@@ -111,5 +112,8 @@ transform = Transform3D(0.999895, -0.0145206, 0, 0.0145206, 0.999895, 0, 0, 0, 1
 
 [node name="Rat" parent="." instance=ExtResource("17_jr54y")]
 transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, -5.47714, 0.5, 5.80198)
+
+[node name="dog" parent="." instance=ExtResource("18_vbmuq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93247, 0.5, 6.07092)
 
 [editable path="Polica"]
