@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player/player.gd" id="1_q11nt"]
 [ext_resource type="PackedScene" uid="uid://bjodx7nngvsg7" path="res://non_interactables/shovel/shovel.tscn" id="2_2bp2a"]
 [ext_resource type="Shader" path="res://player/player.gdshader" id="2_rnbs1"]
-[ext_resource type="PackedScene" uid="uid://b4iesfs6ti5im" path="res://player/blood_particle.tscn" id="3_2jwvc"]
+[ext_resource type="PackedScene" path="res://player/blood_particle.tscn" id="3_2jwvc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_66e3y"]
 radius = 0.3
@@ -106,6 +106,21 @@ offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="NoteLabel" type="Label" parent="HUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="BloodParticle" parent="." instance=ExtResource("3_2jwvc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0796954, 1.71023, -2.15973)

@@ -145,6 +145,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6t7jm")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p6r1t"]
+size = Vector3(1.25195, 3.2865, 0.202148)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ayy3"]
 resource_name = "exit"
@@ -207,6 +208,7 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 script = ExtResource("1_xtncb")
 
 [node name="door" type="Node3D" parent="."]
+transform = Transform3D(0.755, 0, 0, 0, 0.755, 0, 0, 0, 0.755, 0, 0, 0)
 
 [node name="okvir" type="MeshInstance3D" parent="door" groups=["navmesh"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.058173)
@@ -227,7 +229,7 @@ script = ExtResource("5_vjkst")
 [node name="StaticBody3D" type="StaticBody3D" parent="door/vRAT"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door/vRAT/StaticBody3D"]
-transform = Transform3D(1.08764, 0, 0, 0, 2.48104, 0, 0, 0, 0.202145, -0.645243, 2.02919, -0.027152)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.645244, 1.61043, -0.0659386)
 shape = SubResource("BoxShape3D_p6r1t")
 
 [node name="exit" type="MeshInstance3D" parent="door"]

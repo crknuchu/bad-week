@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://7xbswek6khpp"]
 
-[ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="1_jh035"]
+[ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="1_31e3p"]
 
 [node name="Level3Bolnica" type="Node3D"]
 
@@ -156,5 +156,5 @@ operation = 2
 flip_faces = true
 size = Vector3(1, 2, 0.43125)
 
-[node name="Player" parent="." instance=ExtResource("1_jh035")]
+[node name="Player" parent="." instance=ExtResource("1_31e3p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86527, 0, -0.406816)
