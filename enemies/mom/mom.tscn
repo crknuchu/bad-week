@@ -12,5 +12,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04436, 0)
 [node name="MeshInstance3D" parent="." index="1"]
 visible = false
 
-[node name="mama" parent="." index="4" instance=ExtResource("2_dkc5r")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.00518, 3.15341, -0.388218)
+[node name="mama" parent="." index="5" instance=ExtResource("2_dkc5r")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 3.17746, 0)

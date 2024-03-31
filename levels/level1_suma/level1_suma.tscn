@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cuxa68ugtcppc"]
+[gd_scene load_steps=27 format=3 uid="uid://bjsxmmj6pv1sg"]
 
 [ext_resource type="Script" path="res://levels/level1_suma/level1_suma.gd" id="1_3vmv5"]
 [ext_resource type="Texture2D" uid="uid://ctscu5ge31gci" path="res://textures/grass.png" id="1_38s0k"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c8fpp5wnbkm35" path="res://interactables/key/key.tscn" id="5_5b8dt"]
 [ext_resource type="PackedScene" uid="uid://cda2v0dih0t1q" path="res://interactables/polica/polica.tscn" id="6_xl8e8"]
 [ext_resource type="PackedScene" uid="uid://chw107qet8jdu" path="res://interactables/bed/bed.tscn" id="7_qf5pl"]
-[ext_resource type="PackedScene" uid="uid://5di38cfhy27a" path="res://levels/level1_suma/walls.tscn" id="8_mfpgo"]
+[ext_resource type="PackedScene" path="res://levels/level1_suma/walls.tscn" id="8_mfpgo"]
 [ext_resource type="PackedScene" uid="uid://cqc6bxv4jdsoa" path="res://non_interactables/tree/tree.tscn" id="8_sqqx3"]
 [ext_resource type="PackedScene" uid="uid://cyx08if5nltpm" path="res://non_interactables/chain_fence.tscn" id="11_m5hf4"]
 [ext_resource type="PackedScene" uid="uid://dcby50l1byagn" path="res://non_interactables/forest_walls.tscn" id="12_8bue7"]
@@ -30,7 +30,7 @@ sky_material = SubResource("PanoramaSkyMaterial_sjht5")
 background_mode = 2
 sky = SubResource("Sky_w6k0r")
 tonemap_mode = 2
-tonemap_exposure = 0.25
+tonemap_exposure = 2.4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pwuw"]
 albedo_color = Color(0.529412, 0.529412, 0.529412, 1)
@@ -55,7 +55,7 @@ geometry_source_group_name = &"navmesh"
 script = ExtResource("1_3vmv5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
