@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dvro7nrxf5qqn"]
+[gd_scene load_steps=46 format=3 uid="uid://dvro7nrxf5qqn"]
 
 [ext_resource type="Texture2D" uid="uid://dchtbnrlw2nfb" path="res://textures/floor.png" id="1_3t5m2"]
 [ext_resource type="Texture2D" uid="uid://bnwydowtiwt7h" path="res://textures/wall.png" id="2_y2oum"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://bwgpwk18ixuvu" path="res://interactables/shovel_pickup/shovel_pickup.tscn" id="13_86mnq"]
 [ext_resource type="PackedScene" uid="uid://buiv7op0jykph" path="res://non_interactables/closet/closet.tscn" id="14_hx0x3"]
 [ext_resource type="PackedScene" uid="uid://c8fpp5wnbkm35" path="res://interactables/key/key.tscn" id="15_760lw"]
+[ext_resource type="PackedScene" uid="uid://cda2v0dih0t1q" path="res://interactables/polica/polica.tscn" id="16_eotqh"]
+[ext_resource type="PackedScene" uid="uid://c7wqreduhy1da" path="res://interactables/exit_door/exit_door.tscn" id="17_yx3ke"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yut3"]
 resource_name = "Floor"
@@ -405,15 +407,33 @@ shape = SubResource("ConcavePolygonShape3D_1mxpi")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9.35154, -2.76443, 4.49158)
 
 [node name="ShovelPickup" parent="." instance=ExtResource("13_86mnq")]
-transform = Transform3D(0.241532, 0.970393, 0, -0.970393, 0.241532, 0, 0, 0, 1, 7.38503, -2.36667, 3.54072)
+transform = Transform3D(0.0190806, 0.0766595, 0.996875, -0.970393, 0.241532, -3.73272e-09, -0.240777, -0.96736, 0.0789985, 8.70638, 0.746043, 4.77053)
 
 [node name="HeartMonitor" parent="." instance=ExtResource("8_gr38j")]
 transform = Transform3D(0.171413, 0, 0.985199, 0, 1, 0, -0.985199, 0, 0.171413, -2.50161, -1.31413, 5.00507)
 
 [node name="Closet" parent="." instance=ExtResource("14_hx0x3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.39923, 0.100891, -4.77537)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.20177, 0.100891, -4.49844)
 
 [node name="Key" parent="Closet" instance=ExtResource("15_760lw")]
-transform = Transform3D(0.05, 0, 0, 0, 0.00908861, -0.049167, 0, 0.049167, 0.00908861, 0.318178, 0.368876, -0.0332203)
+transform = Transform3D(0.0499992, -0.000271166, -5.01256e-05, 0, 0.00908861, -0.049167, 0.000275761, 0.0491663, 0.00908847, 0.188002, 0.368876, 0.0586348)
+
+[node name="HospitalBed3" parent="." instance=ExtResource("6_aqunt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.43793, -2.96737, -3.03701)
+
+[node name="Polica" parent="." instance=ExtResource("16_eotqh")]
+transform = Transform3D(0.74, 0, 0, 0, 0.74, 0, 0, 0, 0.74, -9.78768, -2.92824, 3.34876)
+
+[node name="HospitalBed4" parent="." instance=ExtResource("6_aqunt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.33591, 0.100891, -3.89171)
+
+[node name="HospitalBed5" parent="." instance=ExtResource("6_aqunt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.740174, 0.100891, -3.84185)
+
+[node name="Toilet2" parent="." instance=ExtResource("12_8qk36")]
+transform = Transform3D(-0.99467, 0, 0.103105, 0, 1, 0, -0.103105, 0, -0.99467, -7.91588, 0.316797, 4.43209)
+
+[node name="exit_door" parent="." instance=ExtResource("17_yx3ke")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -9.45695, -2.96737, -0.34938)
 
 [editable path="Player"]
