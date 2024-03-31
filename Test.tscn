@@ -114,6 +114,7 @@ transform = Transform3D(0.999895, -0.0145206, 0, 0.0145206, 0.999895, 0, 0, 0, 1
 
 [node name="Rat" parent="." instance=ExtResource("17_jr54y")]
 transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, -1.32768, 0.5, 12.463)
+follow_range = 10.0
 
 [node name="Enemy" parent="." instance=ExtResource("17_jyouq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72706, 0.5, -5.24566)
@@ -121,20 +122,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72706, 0.5, -5.24566)
 [node name="doctor" parent="." instance=ExtResource("18_dqoth")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12346, 0.5, -7.17774)
 attack_range = 2.0
+follow_range = 10.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource("19_8tnjk")
 
 [node name="dog" parent="." instance=ExtResource("20_hsrex")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.257616, 0.5, -4.9656)
+follow_range = 20.0
 
 [node name="Kid" parent="." instance=ExtResource("21_wenvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.34732, 0.5, -1.25526)
+follow_range = 100.0
 
 [node name="Mom" parent="." instance=ExtResource("22_ickd0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.10055, 0.5, -3.09187)
+follow_range = 100.0
 
 [node name="Rat2" parent="." instance=ExtResource("17_jr54y")]
 transform = Transform3D(-0.999962, 0, 0.00872664, 0, 1, 0, -0.00872664, 0, -0.999962, -5.1597, 0.5, 9.00945)
+follow_range = 10.0
 
 [editable path="Polica"]

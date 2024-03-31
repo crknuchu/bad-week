@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://b6mxbr1tyqm4k"]
 
-[ext_resource type="PackedScene" uid="uid://b3uf5jkr34tjs" path="res://models/srceekran.glb" id="1_mc3pc"]
+[ext_resource type="PackedScene" uid="uid://bbyu0gbkspn0n" path="res://models/srceekran.glb" id="1_mc3pc"]
 [ext_resource type="Texture2D" uid="uid://0othxay5tgyv" path="res://textures/srce.png" id="2_em68e"]
 [ext_resource type="AudioStream" uid="uid://n4m43cxgyy3o" path="res://sounds/heartbeep.ogg" id="3_2yq21"]
 

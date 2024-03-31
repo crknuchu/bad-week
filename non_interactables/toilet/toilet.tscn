@@ -43,23 +43,24 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bk3v7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ip3tg"]
-size = Vector3(1.93726, 1.97699, 3.02816)
+size = Vector3(0.636963, 1.08426, 0.263205)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_skcl1"]
-size = Vector3(1.93726, 4.14734, 0.686615)
+size = Vector3(0.529541, 0.502899, 0.808128)
 
 [node name="Toilet" type="StaticBody3D" groups=["navmesh"]]
 
 [node name="wcsolja" type="Node3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 
 [node name="Cube" type="MeshInstance3D" parent="wcsolja"]
 mesh = SubResource("ArrayMesh_t23pg")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0126023, -0.294323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.265525, -0.34304)
 shape = SubResource("BoxShape3D_ip3tg")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05121, -1.50172)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00920272, -0.0781474)
 shape = SubResource("BoxShape3D_skcl1")

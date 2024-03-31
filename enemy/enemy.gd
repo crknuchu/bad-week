@@ -24,7 +24,7 @@ func _physics_process(delta):
 	if not is_instance_valid(Global.player):
 		return
 	vision_raycast.rotation.y = -rotation.y
-	vision_raycast.target_position = Global.player.global_position - vision_raycast.global_position
+	vision_raycast.target_position = (Global.player.global_position + Vector3.UP*0.5 - vision_raycast.global_position) * 1000000.0
 	
 
 
@@ -50,6 +50,7 @@ func should_attack():
 	return global_position.distance_to(Global.player.global_position) < attack_range
 
 func should_follow():
+	print(vision_raycast.get_collider())
 	return global_position.distance_to(Global.player.global_position) < follow_range \
 		and not should_attack() \
 		and vision_raycast.is_colliding() \
