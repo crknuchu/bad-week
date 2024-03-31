@@ -43,6 +43,8 @@ func _get_transition(delta):
 
 
 func _enter_state(new_state, old_state):
+	if old_state == State.IDLE:
+		parent.play_sound()				
 	#match new_state:
 		#states.idle:
 			#parent.animation_player.play("idle")

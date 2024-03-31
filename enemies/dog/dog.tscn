@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://2gb6ohyshfdo"]
+[gd_scene load_steps=5 format=3 uid="uid://2gb6ohyshfdo"]
 
 [ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_ryplj"]
+[ext_resource type="AudioStream" uid="uid://cceffuc2aaphv" path="res://sounds/dog-barking-70772.mp3" id="2_3pnsm"]
 [ext_resource type="PackedScene" uid="uid://ddq02l8w7d8vc" path="res://models/ker.glb" id="2_pc2ur"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qpimr"]
@@ -8,6 +9,7 @@ size = Vector3(0.327148, 0.612486, 0.628906)
 
 [node name="dog" instance=ExtResource("1_ryplj")]
 max_health = 1.0
+sound = ExtResource("2_3pnsm")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.304459, 0)

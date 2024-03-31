@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf2j4odbo7gxn"]
+[gd_scene load_steps=5 format=3 uid="uid://bf2j4odbo7gxn"]
 
 [ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_3ul8q"]
-[ext_resource type="PackedScene" uid="uid://dvcxlng7ckg1o" path="res://models/pacov.glb" id="2_qp0i4"]
+[ext_resource type="PackedScene" uid="uid://blumwkmxvodk5" path="res://models/pacov.glb" id="2_qp0i4"]
+[ext_resource type="AudioStream" uid="uid://c31d7fwaayil3" path="res://sounds/mouse-squeaks-68287.mp3" id="2_t728c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3w1j6"]
 size = Vector3(0.218384, 0.274414, 1.25171)
@@ -12,6 +13,7 @@ axis_lock_angular_y = true
 attack_cooldown = 1.0
 damage = 5.0
 max_health = 1.0
+sound = ExtResource("2_t728c")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, -7.91631e-08, -2.08616e-07, 7.91631e-08, 1, 1.22953e-08, 2.08616e-07, -1.22953e-08, 1, -0.014, 0.082, 0)
