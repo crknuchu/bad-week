@@ -1,6 +1,7 @@
 extends Node
 
 var player: Player
+var old_scene: String
 
 func _input(event):
 	if Input.is_action_just_pressed("fullscreen"):

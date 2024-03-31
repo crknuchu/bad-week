@@ -18,5 +18,5 @@ func _process(delta):
 
 func _process_interacting():
 	if Input.is_action_just_pressed("interact"):
-		print("sleep")
+		Transition.transition_to(Global.old_scene)
 		#load level
