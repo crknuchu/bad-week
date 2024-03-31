@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cuxa68ugtcppc"]
+[gd_scene load_steps=28 format=3 uid="uid://cuxa68ugtcppc"]
 
 [ext_resource type="Script" path="res://levels/level1_suma/level1_suma.gd" id="1_3vmv5"]
 [ext_resource type="Texture2D" uid="uid://ctscu5ge31gci" path="res://textures/grass.png" id="1_38s0k"]
@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://dd5fqgiibqlfg" path="res://non_interactables/grave/grave.tscn" id="15_hkla0"]
 [ext_resource type="AudioStream" uid="uid://b8xkfjdajuf3" path="res://sounds/atmosphere-dark-1-16883.mp3" id="17_j6eob"]
 [ext_resource type="Script" path="res://levels/level0/AudioStreamPlayer.gd" id="18_xv1o8"]
+[ext_resource type="PackedScene" uid="uid://bf2j4odbo7gxn" path="res://enemies/rat/rat.tscn" id="19_ppc6l"]
+[ext_resource type="PackedScene" uid="uid://2gb6ohyshfdo" path="res://enemies/dog/dog.tscn" id="20_0hlxs"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sjht5"]
 panorama = ExtResource("1_fcx1a")
@@ -70,7 +72,8 @@ metadata/_edit_lock_ = true
 shape = SubResource("ConcavePolygonShape3D_erejc")
 
 [node name="Player" parent="." instance=ExtResource("2_pq7jn")]
-transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 20.1281, 0.500001, 7.78214)
+transform = Transform3D(-0.985644, 0, -0.168833, 0, 1, 0, 0.168833, 0, -0.985644, -68.722, 0.824441, -51.4642)
+movement_speed = 10.0
 
 [node name="Objects" type="Node3D" parent="."]
 
@@ -89,6 +92,9 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 34.9595, 0.514619, 30.9
 [node name="Polica" parent="Objects" instance=ExtResource("6_xl8e8")]
 transform = Transform3D(-0.998835, 0, 0.0482571, 0, 1, 0, -0.0482571, 0, -0.998835, 43.0087, 0.514619, 30.1256)
 
+[node name="Key" parent="Objects/Polica/policasafijokama/SrednjaFijoka" index="1" instance=ExtResource("5_5b8dt")]
+transform = Transform3D(-0.0299053, -0.00144482, 3.50508e-06, 0, -7.26336e-05, -0.0299401, 0.00144482, -0.0299052, 7.2549e-05, 0.0882359, 0.410744, 0.0750446)
+
 [node name="Polica2" parent="Objects" instance=ExtResource("6_xl8e8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.9863, 0.544449, -20.6965)
 
@@ -98,9 +104,6 @@ navigation_mesh = SubResource("NavigationMesh_bk5pc")
 [node name="CSGCombiner3D" parent="." instance=ExtResource("8_mfpgo")]
 visible = false
 use_collision = false
-
-[node name="Key" parent="." instance=ExtResource("5_5b8dt")]
-transform = Transform3D(0.05, 0, 0, 0, -0.000121298, -0.0499999, 0, 0.0499999, -0.000121298, 40.5788, 0.507385, 29.0702)
 
 [node name="Trees" type="Node3D" parent="."]
 
@@ -212,9 +215,6 @@ transform = Transform3D(-0.19319, 0, -0.981161, 0, 1, 0, 0.981161, 0, -0.19319, 
 [node name="ChainFence7" parent="Fences" instance=ExtResource("11_m5hf4")]
 transform = Transform3D(0.143614, 0, 0.989634, 0, 1, 0, -0.989634, 0, 0.143614, 3.77588, 0.5, 2.83947)
 
-[node name="ShovelPickup" parent="." instance=ExtResource("13_c6yii")]
-transform = Transform3D(0.18169, 0.941996, 0.282191, -0.981903, 0.189387, -1.46017e-08, -0.0534432, -0.277084, 0.959358, 18.8445, 1.14464, 9.59998)
-
 [node name="grave" parent="." instance=ExtResource("15_hkla0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8409, 0.5, -12.0757)
 
@@ -307,4 +307,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7466, 0.139142, -52.0388)
 [node name="bush27" parent="Node3D" instance=ExtResource("14_3lghy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.7295, 0.802792, -46.9673)
 
+[node name="ShovelPickup" parent="." instance=ExtResource("13_c6yii")]
+transform = Transform3D(0.048885, 0.131357, 0.990129, -0.937203, 0.348785, 0, -0.345342, -0.927952, 0.140158, -64.0372, 1.2389, -34.1766)
+
+[node name="Rat" parent="." instance=ExtResource("19_ppc6l")]
+transform = Transform3D(-0.999962, 0, 0.00872664, 0, 1, 0, -0.00872664, 0, -0.999962, -65.0151, 0.5, 0.416268)
+
+[node name="Rat2" parent="." instance=ExtResource("19_ppc6l")]
+transform = Transform3D(-0.999962, 0, 0.00872664, 0, 1, 0, -0.00872664, 0, -0.999962, -19.8083, 0.5, 40.1485)
+
+[node name="Rat3" parent="." instance=ExtResource("19_ppc6l")]
+transform = Transform3D(-0.999962, 0, 0.00872664, 0, 1, 0, -0.00872664, 0, -0.999962, -1.05999, 0.5, 5.319)
+
+[node name="Rat4" parent="." instance=ExtResource("19_ppc6l")]
+transform = Transform3D(-0.999962, 0, 0.00872664, 0, 1, 0, -0.00872664, 0, -0.999962, -36.7918, 0.68697, -25.6417)
+
+[node name="Rat5" parent="." instance=ExtResource("19_ppc6l")]
+transform = Transform3D(-0.999962, 0, 0.00872664, 0, 1, 0, -0.00872664, 0, -0.999962, 7.88916, 0.5, -40.3831)
+
+[node name="dog" parent="." instance=ExtResource("20_0hlxs")]
+transform = Transform3D(-0.105969, 0, 0.994369, 0, 1, 0, -0.994369, 0, -0.105969, 34.8449, -0.138722, -12.2175)
+follow_range = 10.0
+max_health = 3.0
+
 [connection signal="entered" from="Objects/exit_door" to="." method="_on_exit_door_entered"]
+
+[editable path="Objects/Polica"]
