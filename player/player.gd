@@ -32,7 +32,9 @@ var note_timer: float = 0.0
 @onready var shovel_animationplayer = $Camera3D/Shovel/AnimationPlayer
 @onready var shovel: Node3D = $Camera3D/Shovel
 @onready var note_label: Label = $HUD/NoteLabel
-@onready var audio_player = $"../AudioStreamPlayer"
+@onready var attack_sound = $attack_sound
+@onready var walk_sound_ground = $walk_sound_ground
+@onready var walk_sound_hallway = $walk_sound_hallway
 
 func _ready():
 	shovel.visible = has_shovel
@@ -72,13 +74,14 @@ func _process_input():
 func attack():
 	if has_shovel:
 		shovel_animationplayer.play("attack")
+		
 
 
 func deal_damage():
 	for body in attack_hitbox.get_overlapping_bodies():
 		body.hit()
 		blood_particle.emitting = true
-		audio_player.play_attack_sound()
+		attack_sound.play()
 
 func _process_movement(delta):
 	if not is_on_floor():
@@ -93,11 +96,10 @@ func _process_movement(delta):
 		)
 	
 	if input_dir != Vector2.ZERO and is_on_floor():
-		if !audio_player.playing:
-			audio_player.play_walk_sound()
-	elif audio_player.playing:
-		audio_player.stop()
-		#audio_player.play_nature_sound()
+		if !walk_sound_ground.playing:
+			walk_sound_ground.play()
+	elif walk_sound_ground.playing:
+		walk_sound_ground.play()
 	
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var v1 = Vector2(velocity.x, velocity.z)
