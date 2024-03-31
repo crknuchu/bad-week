@@ -3,13 +3,15 @@
 [ext_resource type="Script" path="res://player/player.gd" id="1_q11nt"]
 [ext_resource type="PackedScene" uid="uid://bjodx7nngvsg7" path="res://non_interactables/shovel/shovel.tscn" id="2_2bp2a"]
 [ext_resource type="Shader" path="res://player/player.gdshader" id="2_rnbs1"]
-[ext_resource type="PackedScene" uid="uid://b4iesfs6ti5im" path="res://player/blood_particle.tscn" id="3_2jwvc"]
+[ext_resource type="PackedScene" path="res://player/blood_particle.tscn" id="3_2jwvc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_66e3y"]
 radius = 0.3
+height = 1.7
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rhu50"]
 radius = 0.3
+height = 1.7
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vwjx"]
 size = Vector3(1, 0.644775, 2.17236)
@@ -23,17 +25,18 @@ collision_layer = 2
 script = ExtResource("1_q11nt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 layers = 2
 mesh = SubResource("CapsuleMesh_66e3y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("CapsuleShape3D_rhu50")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68629, 0)
 cull_mask = 1048573
+current = true
 
 [node name="InteractRaycast" type="RayCast3D" parent="Camera3D"]
 target_position = Vector3(0, 0, -3)
@@ -46,7 +49,7 @@ debug_shape_custom_color = Color(1, 0.0470588, 0.317647, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29514e-09, 0.0262533, 0)
 light_energy = 8.792
 spot_range = 356.504
-spot_angle = 22.79
+spot_angle = 120.84
 
 [node name="Shovel" parent="Camera3D" instance=ExtResource("2_2bp2a")]
 transform = Transform3D(-0.99141, -0.123552, -0.0429162, -0.130151, 0.899436, 0.417224, -0.0129485, 0.419226, -0.90779, 0.96988, -2.01963, -1.80998)
