@@ -8,7 +8,7 @@ enum State {
 	DEAD
 }
 
-var state: int
+var state: int = State.IDLE
 var previous_state = null
 
 @onready var parent = get_parent()

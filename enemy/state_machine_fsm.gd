@@ -7,7 +7,7 @@ var timer: float = 0.0
 func _ready():
 	var parent = get_parent()
 	var player = Global.player
-	call_deferred("_set_state", State.FOLLOW)
+	#call_deferred("_set_state", State.FOLLOW)
 
 
 func _state_logic(delta):

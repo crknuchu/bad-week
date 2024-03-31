@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var health: float = max_health
 @onready var blood_splatter = preload("res://non_interactables/blood_splatter/blood_splatter.tscn")
 @onready var parent = get_parent()
+@onready var vision_raycast: RayCast3D = $RayCast3D
 
 const SPEED = 4.0
 
@@ -22,6 +23,9 @@ func _ready():
 func _physics_process(delta):
 	if not is_instance_valid(Global.player):
 		return
+	vision_raycast.rotation.y = -rotation.y
+	vision_raycast.target_position = Global.player.global_position - global_position
+	
 
 
 func follow():
@@ -29,8 +33,12 @@ func follow():
 	nav_agent.set_target_position(Global.player.global_position)
 	var next_nav_point = nav_agent.get_next_path_position()
 	velocity = (next_nav_point - global_position).normalized() * SPEED
+	print(velocity)
 	#global_transform.origin
-	look_at(Global.player.global_position + Vector3(0,1,0),Vector3.UP,true)
+	rotation.y = -Vector2(global_position.x, global_position.z).angle_to_point(
+		Vector2(Global.player.global_position.x, Global.player.global_position.z)
+	) + PI/2.0
+	#look_at(Global.player.global_position + Vector3(0,1,0),Vector3.UP,true)
 	#look_at(Global.player.global_position)
 	#mora ovako inace se cudno rotiraju po y osi
 	move_and_slide()
@@ -43,7 +51,9 @@ func should_attack():
 
 func should_follow():
 	return global_position.distance_to(Global.player.global_position) < follow_range \
-		and not should_attack()
+		and not should_attack() \
+		and vision_raycast.is_colliding() \
+		and vision_raycast.get_collider() is Player
 	
 func hit():
 	health -= 1

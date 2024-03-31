@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c8qidkjekdcst"]
+[gd_scene load_steps=25 format=3 uid="uid://c8qidkjekdcst"]
 
 [ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="1_1b02v"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="3_7rhkb"]
@@ -10,12 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://chw107qet8jdu" path="res://interactables/bed/bed.tscn" id="9_v2rld"]
 [ext_resource type="PackedScene" uid="uid://bpp7sb1tnn231" path="res://interactables/sleeping_pills/sleeping_pills.tscn" id="10_ffwf5"]
 [ext_resource type="PackedScene" uid="uid://bgx27whg5yfrc" path="res://non_interactables/house/house.tscn" id="11_bm1da"]
-[ext_resource type="PackedScene" path="res://non_interactables/chain_fence.tscn" id="12_14e4t"]
+[ext_resource type="PackedScene" uid="uid://cyx08if5nltpm" path="res://non_interactables/chain_fence.tscn" id="12_14e4t"]
 [ext_resource type="PackedScene" uid="uid://cqc6bxv4jdsoa" path="res://non_interactables/tree/tree.tscn" id="13_od2g8"]
 [ext_resource type="PackedScene" uid="uid://dcjnrknsnye48" path="res://non_interactables/computer/computer.tscn" id="14_fyn16"]
 [ext_resource type="PackedScene" uid="uid://qw3x263pkrsm" path="res://non_interactables/reso/Reso.tscn" id="15_qrh8j"]
 [ext_resource type="PackedScene" uid="uid://bwgpwk18ixuvu" path="res://interactables/shovel_pickup/shovel_pickup.tscn" id="16_rom8t"]
 [ext_resource type="PackedScene" uid="uid://bf2j4odbo7gxn" path="res://enemies/rat/rat.tscn" id="17_jr54y"]
+[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="17_jyouq"]
+[ext_resource type="PackedScene" uid="uid://xx16qewpucxt" path="res://enemies/doctor/doctor.tscn" id="18_dqoth"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_74l7n"]
 size = Vector3(30, 1, 30)
@@ -107,5 +109,11 @@ transform = Transform3D(0.999895, -0.0145206, 0, 0.0145206, 0.999895, 0, 0, 0, 1
 
 [node name="Rat" parent="." instance=ExtResource("17_jr54y")]
 transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, -1.32768, 0.5, 12.463)
+
+[node name="Enemy" parent="." instance=ExtResource("17_jyouq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72706, 0.5, -5.24566)
+
+[node name="doctor" parent="." instance=ExtResource("18_dqoth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12346, 0.5, -7.17774)
 
 [editable path="Polica"]

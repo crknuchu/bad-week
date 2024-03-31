@@ -1,17 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://xx16qewpucxt"]
 
-[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemies/enemy/enemy.tscn" id="1_e32sj"]
+[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_e32sj"]
 [ext_resource type="PackedScene" uid="uid://ciia88ux3rp21" path="res://models/doktor.glb" id="2_4svap"]
 
 [node name="doctor" instance=ExtResource("1_e32sj")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 max_health = 1.0
 
 [node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4575, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.626068, 0)
 
 [node name="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.754537, 0)
 visible = false
 
 [node name="doktor" parent="." index="4" instance=ExtResource("2_4svap")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00917053, 0, -0.0550823)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.00917053, 0, -0.0550823)
+
+[node name="RayCast3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28, 0)
+target_position = Vector3(1, 0, 0)
+collision_mask = 3
