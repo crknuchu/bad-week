@@ -1,10 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvro7nrxf5qqn"]
+[gd_scene load_steps=17 format=3 uid="uid://dvro7nrxf5qqn"]
 
 [ext_resource type="Texture2D" uid="uid://dchtbnrlw2nfb" path="res://textures/floor.png" id="1_3t5m2"]
 [ext_resource type="Texture2D" uid="uid://bnwydowtiwt7h" path="res://textures/wall.png" id="2_y2oum"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="3_s84v3"]
 [ext_resource type="PackedScene" uid="uid://xx16qewpucxt" path="res://enemies/doctor/doctor.tscn" id="4_kcmq5"]
 [ext_resource type="PackedScene" uid="uid://0wrujbqt4ekb" path="res://non_interactables/zavesa/zavesa.tscn" id="5_q0nqh"]
+[ext_resource type="PackedScene" uid="uid://dre0nncf4efar" path="res://non_interactables/hospitalbed/hospital_bed.tscn" id="6_aqunt"]
+[ext_resource type="Script" path="res://levels/level0/AudioStreamPlayer.gd" id="7_kkryv"]
+[ext_resource type="PackedScene" uid="uid://b6mxbr1tyqm4k" path="res://non_interactables/heart_monitor/heart_monitor.tscn" id="8_gr38j"]
+[ext_resource type="PackedScene" uid="uid://bf2j4odbo7gxn" path="res://enemies/rat/rat.tscn" id="9_oeka2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yut3"]
 resource_name = "Floor"
@@ -113,7 +117,7 @@ geometry_source_group_name = &"navmesh"
 agent_height = 1.25
 agent_radius = 0.25
 
-[node name="Level1Bolnica" type="Node3D"]
+[node name="Level2Bolnica" type="Node3D"]
 
 [node name="bolnica_quad" type="Node3D" parent="."]
 
@@ -153,5 +157,26 @@ navigation_mesh = SubResource("NavigationMesh_snm35")
 
 [node name="Zavesa" parent="." instance=ExtResource("5_q0nqh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00819, -3, 3.18185)
+
+[node name="HospitalBed" parent="." instance=ExtResource("6_aqunt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.43274, -3, -3.70563)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("7_kkryv")
+
+[node name="HospitalBed2" parent="." instance=ExtResource("6_aqunt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.11884, -2.95589, 4.42515)
+
+[node name="Zavesa2" parent="." instance=ExtResource("5_q0nqh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.830536, -2.95589, 2.62483)
+
+[node name="Zavesa3" parent="." instance=ExtResource("5_q0nqh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38184, -2.95589, 2.62483)
+
+[node name="HeartMonitor" parent="." instance=ExtResource("8_gr38j")]
+transform = Transform3D(0.342447, 0, 0.939537, 0, 1, 0, -0.939537, 0, 0.342447, -2.78064, -1.34908, 4.99157)
+
+[node name="Rat" parent="." instance=ExtResource("9_oeka2")]
+transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, -1.62903, -2.09437, 4.15193)
 
 [editable path="Player"]
