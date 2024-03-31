@@ -106,3 +106,5 @@ shape = SubResource("BoxShape3D_egbte")
 
 [node name="Player" parent="." instance=ExtResource("9_yx8bb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.144394, 0, 0.455244)
+
+[editable path="Player"]
