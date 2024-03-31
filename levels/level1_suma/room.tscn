@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://csi3ym3gxq1sk"]
+
+[ext_resource type="PackedScene" uid="uid://tjbfm6sokd4m" path="res://levels/level0/room.tscn" id="1_1v24v"]
+
+[node name="room" instance=ExtResource("1_1v24v")]
+
+[node name="bed" parent="soba" index="1"]
+dream_scene = "res://levels/level1_suma/level1_suma.tscn"
+
+[node name="letter" parent="." index="4"]
+text = "Dear Zoran,
+You have an outstanding medical bill of $521700. If you fail to start paying it off, we will have to take legal action."
+
+[editable path="Player"]

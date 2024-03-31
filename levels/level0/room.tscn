@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://tjbfm6sokd4m"]
+[gd_scene load_steps=23 format=3 uid="uid://tjbfm6sokd4m"]
 
 [ext_resource type="PackedScene" uid="uid://dq8i3ontw6ag8" path="res://models/soba.glb" id="1_8b8qr"]
 [ext_resource type="Script" path="res://levels/level0/room.gd" id="1_u4k4o"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="9_oo6hh"]
 [ext_resource type="PackedScene" uid="uid://bpp7sb1tnn231" path="res://interactables/sleeping_pills/sleeping_pills.tscn" id="10_0jukt"]
 [ext_resource type="PackedScene" uid="uid://brbrncopd8dwc" path="res://interactables/letter/letter.tscn" id="12_f2u7j"]
+[ext_resource type="AudioStream" uid="uid://bvk38e1xighuc" path="res://sounds/electric-hum-141075.mp3" id="13_7ulvx"]
+[ext_resource type="Script" path="res://levels/level0/AudioStreamPlayer2.gd" id="14_vypl6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fklpo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -123,5 +125,14 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.763388, 0.856012, 
 transform = Transform3D(0.0301381, 0, 0.039896, 0, 0.05, 0, -0.039896, 0, 0.0301381, 0.573745, 0.0359876, 2.16581)
 text = "Dear Zoran,
 I hope you have a wonderful day!"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_7ulvx")
+volume_db = -11.477
+autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 3.133
+script = ExtResource("14_vypl6")
 
 [editable path="Player"]

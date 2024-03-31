@@ -32,6 +32,9 @@ var note_timer: float = 0.0
 @onready var shovel_animationplayer = $Camera3D/Shovel/AnimationPlayer
 @onready var shovel: Node3D = $Camera3D/Shovel
 @onready var note_label: Label = $HUD/NoteLabel
+@onready var audio_player = $"../AudioStreamPlayer"
+
+var walking_sound = preload("res://sounds/going-on-a-forest-road-gravel-and-grass-6404.mp3")
 
 func _ready():
 	shovel.visible = has_shovel
@@ -83,12 +86,21 @@ func _process_movement(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 		
+		
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
 	var input_dir = Input.get_vector(
 		"move_left", "move_right", "move_forward", "move_backward"
 		)
+	
+	if input_dir != Vector2.ZERO and is_on_floor():
+		if !audio_player.playing:
+			audio_player.play_walk_sound()
+	elif audio_player.playing:
+		audio_player.stop()
+		#audio_player.play_nature_sound()
+	
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var v1 = Vector2(velocity.x, velocity.z)
 	var v2 = Vector2(direction.x, direction.z) * movement_speed

@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://cnws67pcw6gka"]
+[gd_scene load_steps=17 format=3 uid="uid://cnws67pcw6gka"]
 
 [ext_resource type="Script" path="res://levels/level0/tutorial_njiva.gd" id="1_uny2e"]
 [ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="2_gqoi5"]
 [ext_resource type="Texture2D" uid="uid://bymc1chin4b2d" path="res://textures/wheat.png" id="2_lb0cw"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_x8dqy"]
 [ext_resource type="PackedScene" uid="uid://c7wqreduhy1da" path="res://interactables/exit_door/exit_door.tscn" id="4_2aj52"]
+[ext_resource type="AudioStream" uid="uid://ck024i1vdbsox" path="res://sounds/evening-birds-singing-in-spring-background-sounds-of-nature-146388.mp3" id="6_yyxcx"]
+[ext_resource type="Script" path="res://levels/level0/AudioStreamPlayer.gd" id="7_y5w1g"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7mq6y"]
 panorama = ExtResource("2_gqoi5")
@@ -86,5 +88,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77262, 0.100002, 13.7544)
 [node name="exit_door" parent="." instance=ExtResource("4_2aj52")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -1.6616, 0.0999999, 0.145887)
 key_needed = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_yyxcx")
+autoplay = true
+script = ExtResource("7_y5w1g")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_yyxcx")
+autoplay = true
 
 [connection signal="entered" from="exit_door" to="." method="_on_exit_door_entered"]

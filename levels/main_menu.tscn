@@ -8,6 +8,7 @@ anchors_preset = 0
 script = ExtResource("1_esls8")
 
 [node name="start" type="Button" parent="."]
+layout_mode = 0
 offset_left = 135.0
 offset_top = 121.0
 offset_right = 181.0
@@ -15,6 +16,7 @@ offset_bottom = 152.0
 text = "start"
 
 [node name="quit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 136.0
 offset_top = 178.0
 offset_right = 182.0

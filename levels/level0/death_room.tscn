@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://t0513rcolfno"]
+[gd_scene load_steps=21 format=3 uid="uid://t0513rcolfno"]
 
 [ext_resource type="PackedScene" uid="uid://dq8i3ontw6ag8" path="res://models/soba.glb" id="1_urdls"]
 [ext_resource type="PackedScene" uid="uid://chw107qet8jdu" path="res://interactables/bed/bed.tscn" id="2_uo4iu"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bn2mwyw5kqoib" path="res://non_interactables/room_door/room_door.tscn" id="8_kmr2v"]
 [ext_resource type="Script" path="res://non_interactables/room/Player_death_room.gd" id="9_5ffjt"]
 [ext_resource type="Shader" path="res://player/player.gdshader" id="10_febew"]
+[ext_resource type="AudioStream" uid="uid://bvk38e1xighuc" path="res://sounds/electric-hum-141075.mp3" id="11_i11ag"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fklpo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -165,7 +166,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="InteractLabel2" type="Label" parent="player/HUD"]
+[node name="NoteLabel" type="Label" parent="player/HUD"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -181,3 +182,8 @@ theme_override_font_sizes/font_size = 20
 text = "press e to go back to sleep"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="RoomSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_i11ag")
+volume_db = -8.145
+autoplay = true

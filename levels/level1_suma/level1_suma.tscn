@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://cuxa68ugtcppc"]
+[gd_scene load_steps=25 format=3 uid="uid://cuxa68ugtcppc"]
 
-[ext_resource type="Script" path="res://levels/level1/level1_suma.gd" id="1_3vmv5"]
+[ext_resource type="Script" path="res://levels/level1_suma/level1_suma.gd" id="1_3vmv5"]
 [ext_resource type="Texture2D" uid="uid://ctscu5ge31gci" path="res://textures/grass.png" id="1_38s0k"]
 [ext_resource type="Texture2D" uid="uid://ry2vsqmrmr8u" path="res://textures/d84b1ed4-5589-44ce-8183-f4eacd95267b_scaled_jpg.png" id="1_fcx1a"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_pq7jn"]
@@ -9,13 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://c8fpp5wnbkm35" path="res://interactables/key/key.tscn" id="5_5b8dt"]
 [ext_resource type="PackedScene" uid="uid://cda2v0dih0t1q" path="res://interactables/polica/polica.tscn" id="6_xl8e8"]
 [ext_resource type="PackedScene" uid="uid://chw107qet8jdu" path="res://interactables/bed/bed.tscn" id="7_qf5pl"]
-[ext_resource type="PackedScene" uid="uid://5di38cfhy27a" path="res://levels/level1/walls.tscn" id="8_mfpgo"]
+[ext_resource type="PackedScene" uid="uid://5di38cfhy27a" path="res://levels/level1_suma/walls.tscn" id="8_mfpgo"]
 [ext_resource type="PackedScene" uid="uid://cqc6bxv4jdsoa" path="res://non_interactables/tree/tree.tscn" id="8_sqqx3"]
 [ext_resource type="PackedScene" uid="uid://cyx08if5nltpm" path="res://non_interactables/chain_fence.tscn" id="11_m5hf4"]
 [ext_resource type="PackedScene" uid="uid://dcby50l1byagn" path="res://non_interactables/forest_walls.tscn" id="12_8bue7"]
 [ext_resource type="PackedScene" uid="uid://bwgpwk18ixuvu" path="res://interactables/shovel_pickup/shovel_pickup.tscn" id="13_c6yii"]
 [ext_resource type="PackedScene" uid="uid://dvgnb647ufxyb" path="res://non_interactables/bush/bush.tscn" id="14_3lghy"]
 [ext_resource type="PackedScene" uid="uid://dd5fqgiibqlfg" path="res://non_interactables/grave/grave.tscn" id="15_hkla0"]
+[ext_resource type="AudioStream" uid="uid://b8xkfjdajuf3" path="res://sounds/atmosphere-dark-1-16883.mp3" id="17_j6eob"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sjht5"]
 panorama = ExtResource("1_fcx1a")
@@ -216,5 +217,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.219, 0.698778, -6.33872)
 
 [node name="grave" parent="." instance=ExtResource("15_hkla0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8409, 0.5, -12.0757)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_j6eob")
+volume_db = -9.478
+autoplay = true
 
 [connection signal="entered" from="Objects/exit_door" to="." method="_on_exit_door_entered"]
