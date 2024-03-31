@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dd5fqgiibqlfg" path="res://non_interactables/grave/grave.tscn" id="15_hkla0"]
 [ext_resource type="AudioStream" uid="uid://b8xkfjdajuf3" path="res://sounds/atmosphere-dark-1-16883.mp3" id="17_j6eob"]
 [ext_resource type="Script" path="res://levels/level0/AudioStreamPlayer.gd" id="18_xv1o8"]
-[ext_resource type="PackedScene" uid="uid://xx16qewpucxt" path="res://enemies/doctor/doctor.tscn" id="19_4a07n"]
+[ext_resource type="PackedScene" uid="uid://bf2j4odbo7gxn" path="res://enemies/rat/rat.tscn" id="19_ppc6l"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sjht5"]
 panorama = ExtResource("1_fcx1a")
@@ -228,7 +228,7 @@ volume_db = -9.478
 autoplay = true
 script = ExtResource("18_xv1o8")
 
-[node name="doctor" parent="." instance=ExtResource("19_4a07n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7116, 0.5, 11.4167)
+[node name="Rat" parent="." instance=ExtResource("19_ppc6l")]
+transform = Transform3D(0.0999163, -0.00399749, 0.00087196, -0.00399734, -0.0999201, -3.48844e-05, 0.000872657, 0, -0.0999962, 25.095, 1.0667, 8.27064)
 
 [connection signal="entered" from="Objects/exit_door" to="." method="_on_exit_door_entered"]
