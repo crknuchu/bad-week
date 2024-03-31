@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cd7ees175efl5"]
+[gd_scene load_steps=2 format=3 uid="uid://csi3ym3gxq1sk"]
 
 [ext_resource type="PackedScene" uid="uid://tjbfm6sokd4m" path="res://levels/level0/room.tscn" id="1_1v24v"]
 
@@ -9,6 +9,6 @@ dream_scene = "res://levels/level1_suma/level1_suma.tscn"
 
 [node name="letter" parent="." index="4"]
 text = "Dear Zoran,
-your dog got hit by a car."
+I'm sorry to say Žuća got hit by a car, he did not make it."
 
 [editable path="Player"]

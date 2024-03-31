@@ -9,6 +9,6 @@ dream_scene = "res://levels/level2_bolnica/level2_bolnica.tscn"
 
 [node name="letter" parent="." index="4"]
 text = "Dear Zoran,
-You have an outstanding medical bill of $521700. You will hear from us if you don't pay up."
+You have an outstanding medical bill of $52170.97 You will hear from us if you don't pay up."
 
 [editable path="Player"]

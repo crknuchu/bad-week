@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdoba25ejebje"]
+[gd_scene load_steps=3 format=3 uid="uid://cdoba25ejebje"]
 
 [ext_resource type="Script" path="res://levels/main_menu.gd" id="1_esls8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_klqhd"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -22,6 +27,15 @@ offset_top = 178.0
 offset_right = 182.0
 offset_bottom = 209.0
 text = "quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 109.0
+text = "BAD WEEK"
+label_settings = SubResource("LabelSettings_klqhd")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
