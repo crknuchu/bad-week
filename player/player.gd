@@ -140,7 +140,8 @@ func heal(amount: float):
 
 
 func death():
-	print("umr8")
+	Global.old_scene = get_tree().current_scene.scene_file_path
+	Transition.transition_to("res://levels/level0/death_room.tscn")
 
 
 func _update_blood_hp_indicator():
