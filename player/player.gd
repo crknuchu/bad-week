@@ -60,8 +60,8 @@ func _process_note(delta):
 
 
 func _process_interacting():
-	interact_label.visible = interact_raycast.is_colliding()
-	if Input.is_action_just_pressed("interact") and interact_raycast.is_colliding():
+	interact_label.visible = interact_raycast.is_colliding() and interact_raycast.get_collider() is Interactable
+	if Input.is_action_just_pressed("interact") and interact_raycast.is_colliding() and interact_raycast.get_collider() is Interactable:
 		interact()
 
 
