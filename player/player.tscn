@@ -1,12 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b33ffx2tmr73u"]
+[gd_scene load_steps=9 format=3 uid="uid://b33ffx2tmr73u"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_q11nt"]
 [ext_resource type="PackedScene" uid="uid://bjodx7nngvsg7" path="res://non_interactables/shovel/shovel.tscn" id="2_2bp2a"]
 [ext_resource type="Shader" path="res://player/player.gdshader" id="2_rnbs1"]
-[ext_resource type="PackedScene" uid="uid://b4iesfs6ti5im" path="res://player/blood_particle.tscn" id="3_2jwvc"]
-[ext_resource type="AudioStream" uid="uid://cwockdfvj8xxs" path="res://sounds/metal-knock-2-103060.mp3" id="5_f044o"]
-[ext_resource type="AudioStream" uid="uid://dfrp71buutoec" path="res://sounds/going-on-a-forest-road-gravel-and-grass-6404.mp3" id="6_hamvb"]
-[ext_resource type="AudioStream" uid="uid://v8wjurtqy5vc" path="res://sounds/hallway_walk.mp3" id="7_apm27"]
+[ext_resource type="PackedScene" path="res://player/blood_particle.tscn" id="3_2jwvc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_66e3y"]
 radius = 0.3
@@ -49,9 +46,10 @@ debug_shape_custom_color = Color(1, 0.0470588, 0.317647, 1)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29514e-09, 0.0262533, 0)
-light_energy = 8.792
-spot_range = 356.504
-spot_angle = 22.79
+light_energy = 2.877
+spot_range = 54.984
+spot_attenuation = 2.21914
+spot_angle = 83.89
 
 [node name="Shovel" parent="Camera3D" instance=ExtResource("2_2bp2a")]
 transform = Transform3D(-0.99141, -0.123552, -0.0429162, -0.130151, 0.899436, 0.417224, -0.0129485, 0.419226, -0.90779, 0.96988, -2.01963, -1.80998)
@@ -131,11 +129,8 @@ autowrap_mode = 3
 [node name="BloodParticle" parent="." instance=ExtResource("3_2jwvc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0796954, 1.71023, -2.15973)
 
-[node name="attack_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_f044o")
-
 [node name="walk_sound_ground" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_hamvb")
 
 [node name="walk_sound_hallway" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_apm27")
+
+[node name="attack_sound" type="AudioStreamPlayer" parent="."]
