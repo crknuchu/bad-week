@@ -332,6 +332,9 @@ shape = SubResource("BoxShape3D_o0ycq")
 [node name="Player" parent="." instance=ExtResource("3_s84v3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46342, -3, -3.72323)
 
+[node name="Camera3D" parent="Player" index="2"]
+current = true
+
 [node name="SpotLight3D" parent="Player/Camera3D" index="1"]
 light_energy = 2.412
 spot_range = 8.338
