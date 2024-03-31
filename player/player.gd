@@ -1,21 +1,25 @@
 class_name Player
 extends CharacterBody3D
 
+
+@export var movement_speed: float = 3.5
+@export var sprint_multiplier: float = 1.5
 @export var sensitivity: float = 0.6
 @export var max_health: float = 100
-var has_key: bool = false
-var has_pills: bool = false
-var has_letter: bool = false
 @export var has_shovel: bool = false:
 	set(value):
 		shovel.visible = value
 		has_shovel = value
 	get:
 		return has_shovel
-
-@export var movement_speed = 5.0
+		
+		
+var has_key: bool = false
+var has_pills: bool = false
+var has_letter: bool = false
 const JUMP_VELOCITY = 6.5
 var gravity = 30.0
+var note_timer: float = 0.0
 
 @onready var camera: Camera3D = $Camera3D
 @onready var interact_raycast: RayCast3D = $Camera3D/InteractRaycast
@@ -27,6 +31,7 @@ var gravity = 30.0
 @onready var blood_particle = $BloodParticle
 @onready var shovel_animationplayer = $Camera3D/Shovel/AnimationPlayer
 @onready var shovel: Node3D = $Camera3D/Shovel
+@onready var note_label: Label = $HUD/NoteLabel
 
 func _ready():
 	shovel.visible = has_shovel
@@ -42,6 +47,13 @@ func _physics_process(delta):
 
 func _process(delta):
 	_process_interacting()
+	_process_note(delta)
+
+
+func _process_note(delta):
+	note_timer -= delta
+	if note_timer <= 0.0:
+		note_label.visible = false
 
 
 func _process_interacting():
@@ -78,8 +90,13 @@ func _process_movement(delta):
 		"move_left", "move_right", "move_forward", "move_backward"
 		)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	velocity.x = direction.x * movement_speed
-	velocity.z = direction.z * movement_speed
+	var v1 = Vector2(velocity.x, velocity.z)
+	var v2 = Vector2(direction.x, direction.z) * movement_speed
+	if Input.is_action_pressed("sprint"):
+		v2 *= sprint_multiplier
+	var v3 = lerp(v1, v2, 8.0*delta)
+	velocity = Vector3(v3.x, velocity.y, v3.y)
+	
 
 	move_and_slide()
 	
@@ -128,3 +145,9 @@ func take_pills():
 
 func take_letter():
 	has_letter = true
+	
+	
+func show_message(text: String, time: float = 4.0):
+	note_timer = time
+	note_label.visible = true
+	note_label.text = text

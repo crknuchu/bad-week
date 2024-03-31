@@ -52,6 +52,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.12144, 0.0125426, 0.713142
 
 [node name="bed" parent="soba" instance=ExtResource("2_p4w4t")]
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -0.356962, 0, -1.44888)
+dream_scene = "res://levels/level0/tutorial_njiva.tscn"
 
 [node name="frizider" parent="soba" instance=ExtResource("3_spg1e")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.615198, -1.19209e-07, 0.0485901)
@@ -115,84 +116,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.144394, 0, 0.455244)
 [node name="SpotLight3D" parent="Player/Camera3D" index="1"]
 visible = false
 
-[node name="letter_content" type="Label" parent="Player/HUD" index="3"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 20
-text = "Dear [REDACTED],
-your dog got hit by a car.
-
--John Doe"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="maybe_read" type="Label" parent="Player/HUD" index="4"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -27.0
-offset_right = 1.0
-offset_bottom = -27.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 20
-text = "maybe i should read
-that letter by the door"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="not_sleepy" type="Label" parent="Player/HUD" index="5"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -27.0
-offset_right = 1.0
-offset_bottom = -27.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 20
-text = "i dont feel sleepy yet"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="shit" type="Label" parent="Player/HUD" index="6"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -27.0
-offset_right = 1.0
-offset_bottom = -27.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 20
-text = "shit..."
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="sleeping_pills" parent="." instance=ExtResource("10_0jukt")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.763388, 0.856012, -1.97443)
 
 [node name="letter" parent="." instance=ExtResource("12_f2u7j")]
 transform = Transform3D(0.0301381, 0, 0.039896, 0, 0.05, 0, -0.039896, 0, 0.0301381, 0.573745, 0.0359876, 2.16581)
+text = "Dear Zoran,
+I hope you have a wonderful day!"
 
 [editable path="Player"]

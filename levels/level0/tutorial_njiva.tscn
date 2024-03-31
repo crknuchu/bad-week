@@ -85,5 +85,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77262, 0.100002, 13.7544)
 
 [node name="exit_door" parent="." instance=ExtResource("4_2aj52")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -1.6616, 0.0999999, 0.145887)
+key_needed = false
 
 [connection signal="entered" from="exit_door" to="." method="_on_exit_door_entered"]

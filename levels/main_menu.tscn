@@ -2,26 +2,24 @@
 
 [ext_resource type="Script" path="res://levels/main_menu.gd" id="1_esls8"]
 
-[node name="MainMenu" type="Node3D"]
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_esls8")
 
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="start" type="Button" parent="HUD"]
+[node name="start" type="Button" parent="."]
 offset_left = 135.0
 offset_top = 121.0
 offset_right = 181.0
 offset_bottom = 152.0
 text = "start"
 
-[node name="quit" type="Button" parent="HUD"]
+[node name="quit" type="Button" parent="."]
 offset_left = 136.0
 offset_top = 178.0
 offset_right = 182.0
 offset_bottom = 209.0
 text = "quit"
 
-[node name="Main3D" type="Node3D" parent="."]
-
-[connection signal="pressed" from="HUD/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="HUD/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

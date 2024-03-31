@@ -1,4 +1,4 @@
 extends Node3D
 
 func _on_exit_door_entered():
-	print("exit")
+	Transition.transition_to("res://levels/level1/room.tscn", 0.2, Color.WHITE, Color.WHITE, 3.0)
