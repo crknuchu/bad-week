@@ -31,6 +31,3 @@ script = ExtResource("2_tyixo")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 collision_mask = 3
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = 9.398

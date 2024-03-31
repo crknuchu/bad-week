@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://0othxay5tgyv" path="res://textures/srce.png" id="2_em68e"]
 [ext_resource type="AudioStream" uid="uid://n4m43cxgyy3o" path="res://sounds/heartbeep.ogg" id="3_2yq21"]
-[ext_resource type="PackedScene" uid="uid://bbyu0gbkspn0n" path="res://models/srceekran.glb" id="4_xoddp"]
+[ext_resource type="PackedScene" uid="uid://bbyu0gbkspn0n" path="res://models/stepenice.glb" id="4_xoddp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dwv3b"]
 size = Vector3(1.21875, 1.88867, 1.90601)
