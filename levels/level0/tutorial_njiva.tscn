@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cnws67pcw6gka"]
 
-[ext_resource type="Script" path="res://levels/tutorial_njiva/tutorial_njiva.gd" id="1_uny2e"]
+[ext_resource type="Script" path="res://levels/level0/tutorial_njiva.gd" id="1_uny2e"]
 [ext_resource type="Texture2D" uid="uid://b3lp4kyfubem0" path="res://textures/cgaxis_hdri_skies_01_60-1.jpg" id="2_gqoi5"]
 [ext_resource type="Texture2D" uid="uid://bymc1chin4b2d" path="res://textures/wheat.png" id="2_lb0cw"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="2_x8dqy"]

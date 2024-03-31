@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var max_health: float = 100
 var has_key: bool = false
 var has_pills: bool = false
+var has_letter: bool = false
 @export var has_shovel: bool = false:
 	set(value):
 		shovel.visible = value
@@ -123,3 +124,7 @@ func pick_up_key():
 	
 func take_pills():
 	has_pills = true
+
+
+func take_letter():
+	has_letter = true
