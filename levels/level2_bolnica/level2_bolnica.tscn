@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dvro7nrxf5qqn"]
+[gd_scene load_steps=27 format=3 uid="uid://dvro7nrxf5qqn"]
 
 [ext_resource type="Texture2D" uid="uid://dchtbnrlw2nfb" path="res://textures/floor.png" id="1_3t5m2"]
 [ext_resource type="Texture2D" uid="uid://bnwydowtiwt7h" path="res://textures/wall.png" id="2_y2oum"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://dfcbo33ym8rmd" path="res://non_interactables/toilet/toilet.tscn" id="12_8qk36"]
 [ext_resource type="PackedScene" uid="uid://bwgpwk18ixuvu" path="res://interactables/shovel_pickup/shovel_pickup.tscn" id="13_86mnq"]
 [ext_resource type="PackedScene" uid="uid://m2ti76wloh5e" path="res://non_interactables/table/table.tscn" id="14_phwmq"]
+[ext_resource type="PackedScene" uid="uid://buiv7op0jykph" path="res://non_interactables/closet/closet.tscn" id="15_au12o"]
+[ext_resource type="PackedScene" uid="uid://c8fpp5wnbkm35" path="res://interactables/key/key.tscn" id="16_7vxap"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yut3"]
 resource_name = "Floor"
@@ -241,5 +243,11 @@ transform = Transform3D(-0.999962, 0, 0.00872664, 0, 1, 0, -0.00872664, 0, -0.99
 
 [node name="HospitalBed5" parent="." instance=ExtResource("6_aqunt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.740305, 0.0500001, -3.02649)
+
+[node name="Closet" parent="." instance=ExtResource("15_au12o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.09243, 0.0500001, -4.60891)
+
+[node name="Key" parent="." instance=ExtResource("16_7vxap")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -9.01741, 0.563758, -4.28359)
 
 [editable path="Player"]
