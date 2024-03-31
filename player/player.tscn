@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player/player.gd" id="1_q11nt"]
 [ext_resource type="PackedScene" uid="uid://bjodx7nngvsg7" path="res://non_interactables/shovel/shovel.tscn" id="2_2bp2a"]
 [ext_resource type="Shader" path="res://player/player.gdshader" id="2_rnbs1"]
-[ext_resource type="PackedScene" uid="uid://b4iesfs6ti5im" path="res://player/blood_particle.tscn" id="3_2jwvc"]
+[ext_resource type="PackedScene" path="res://player/blood_particle.tscn" id="3_2jwvc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_66e3y"]
 radius = 0.3
