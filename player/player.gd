@@ -34,8 +34,6 @@ var note_timer: float = 0.0
 @onready var note_label: Label = $HUD/NoteLabel
 @onready var audio_player = $"../AudioStreamPlayer"
 
-var walking_sound = preload("res://sounds/going-on-a-forest-road-gravel-and-grass-6404.mp3")
-
 func _ready():
 	shovel.visible = has_shovel
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -80,7 +78,7 @@ func deal_damage():
 	for body in attack_hitbox.get_overlapping_bodies():
 		body.hit()
 		blood_particle.emitting = true
-
+		audio_player.play_attack_sound()
 
 func _process_movement(delta):
 	if not is_on_floor():
