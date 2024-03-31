@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvro7nrxf5qqn"]
+[gd_scene load_steps=13 format=3 uid="uid://dvro7nrxf5qqn"]
 
 [ext_resource type="Texture2D" uid="uid://dchtbnrlw2nfb" path="res://textures/floor.png" id="1_3t5m2"]
 [ext_resource type="Texture2D" uid="uid://bnwydowtiwt7h" path="res://textures/wall.png" id="2_y2oum"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="3_s84v3"]
 [ext_resource type="PackedScene" uid="uid://xx16qewpucxt" path="res://enemies/doctor/doctor.tscn" id="4_kcmq5"]
+[ext_resource type="PackedScene" uid="uid://0wrujbqt4ekb" path="res://non_interactables/zavesa/zavesa.tscn" id="5_q0nqh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yut3"]
 resource_name = "Floor"
@@ -149,5 +150,8 @@ attack_range = 2.0
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_snm35")
+
+[node name="Zavesa" parent="." instance=ExtResource("5_q0nqh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00819, -3, 3.18185)
 
 [editable path="Player"]

@@ -46,9 +46,10 @@ debug_shape_custom_color = Color(1, 0.0470588, 0.317647, 1)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29514e-09, 0.0262533, 0)
-light_energy = 8.792
-spot_range = 356.504
-spot_angle = 22.79
+light_energy = 2.877
+spot_range = 54.984
+spot_attenuation = 2.21914
+spot_angle = 83.89
 
 [node name="Shovel" parent="Camera3D" instance=ExtResource("2_2bp2a")]
 transform = Transform3D(-0.99141, -0.123552, -0.0429162, -0.130151, 0.899436, 0.417224, -0.0129485, 0.419226, -0.90779, 0.96988, -2.01963, -1.80998)
