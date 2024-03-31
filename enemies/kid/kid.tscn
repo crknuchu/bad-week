@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtv4xsbfixhv0"]
 
-[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemies/enemy/enemy.tscn" id="1_ueov2"]
+[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_ueov2"]
 [ext_resource type="PackedScene" uid="uid://byd361c0hela1" path="res://models/dete.glb" id="2_nwyi8"]
 
 [node name="Kid" instance=ExtResource("1_ueov2")]
@@ -35,5 +35,8 @@ transform = Transform3D(0.529047, -0.848592, 0, 0.848592, 0.529047, 0, 0, 0, 1, 
 
 [node name="Cube_004" parent="dete" index="6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84802, -1.9205, 4.05136)
+
+[node name="RayCast3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74603, 0)
 
 [editable path="dete"]

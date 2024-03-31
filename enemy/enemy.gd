@@ -24,7 +24,7 @@ func _physics_process(delta):
 	if not is_instance_valid(Global.player):
 		return
 	vision_raycast.rotation.y = -rotation.y
-	vision_raycast.target_position = Global.player.global_position - global_position
+	vision_raycast.target_position = Global.player.global_position - vision_raycast.global_position
 	
 
 
