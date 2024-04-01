@@ -4,7 +4,11 @@
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_esls8")
 
 [node name="start" type="Button" parent="."]
@@ -22,6 +26,16 @@ offset_top = 178.0
 offset_right = 182.0
 offset_bottom = 209.0
 text = "quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+text = "Bad Week"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

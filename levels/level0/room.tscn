@@ -43,7 +43,7 @@ size = Vector3(2.23047, 2.10645, 0.0396118)
 [sub_resource type="BoxShape3D" id="BoxShape3D_egbte"]
 size = Vector3(2.23047, 0.499023, 3.25098)
 
-[node name="room" type="Node3D"]
+[node name="room2" type="Node3D"]
 script = ExtResource("1_u4k4o")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

@@ -31,7 +31,7 @@ sky_material = SubResource("PanoramaSkyMaterial_sjht5")
 background_mode = 2
 sky = SubResource("Sky_w6k0r")
 tonemap_mode = 2
-tonemap_exposure = 2.4
+tonemap_exposure = 0.15
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pwuw"]
 albedo_color = Color(0.529412, 0.529412, 0.529412, 1)
@@ -73,7 +73,7 @@ shape = SubResource("ConcavePolygonShape3D_erejc")
 
 [node name="Player" parent="." instance=ExtResource("2_pq7jn")]
 transform = Transform3D(-0.985644, 0, -0.168833, 0, 1, 0, 0.168833, 0, -0.985644, -68.722, 0.824441, -51.4642)
-movement_speed = 10.0
+movement_speed = 4.0
 
 [node name="Objects" type="Node3D" parent="."]
 
