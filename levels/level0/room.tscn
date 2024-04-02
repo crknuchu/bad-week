@@ -63,7 +63,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.615198, -1.19209e-07
 transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -0.641013, 0, 0.63023)
 
 [node name="Reso" parent="soba" instance=ExtResource("5_xp516")]
-transform = Transform3D(0.0449246, 0, 0.598316, 0, 0.6, 0, -0.598316, 0, 0.0449246, -0.776379, 0.645808, 0.604198)
+transform = Transform3D(0.0299497, 0, 0.398877, 0, 0.4, 0, -0.398877, 0, 0.0299497, -0.776379, 0.447772, 0.604198)
 
 [node name="Computer" parent="soba" instance=ExtResource("6_jvuyy")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.710845, 0.433166, -1.64516)
@@ -115,16 +115,21 @@ shape = SubResource("BoxShape3D_egbte")
 [node name="Player" parent="." instance=ExtResource("9_oo6hh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.144394, 0, 0.455244)
 
-[node name="SpotLight3D" parent="Player/Camera3D" index="1"]
-visible = false
-
 [node name="sleeping_pills" parent="." instance=ExtResource("10_0jukt")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.763388, 0.856012, -1.97443)
 
 [node name="letter" parent="." instance=ExtResource("12_f2u7j")]
-transform = Transform3D(0.0301381, 0, 0.039896, 0, 0.05, 0, -0.039896, 0, 0.0301381, 0.573745, 0.0359876, 2.16581)
+transform = Transform3D(0.602763, 0, 0.797921, 0, 1, 0, -0.797921, 0, 0.602763, 0.573745, 0.0359876, 2.16581)
 text = "Dear Zoran,
 I hope you have a wonderful day!"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="letter"]
+transform = Transform3D(1, 0, 1.78814e-07, 0, 1, 0, -1.78814e-07, 0, 1, 0, 0.037, 0)
+light_energy = 0.11
+light_size = 1.0
+light_specular = 0.0
+omni_range = 0.274
+omni_attenuation = 0.933036
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_7ulvx")

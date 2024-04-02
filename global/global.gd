@@ -11,3 +11,11 @@ func _input(event):
 			get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN
 	elif Input.is_action_just_pressed("kill_game"):
 		get_tree().quit()
+
+
+func play_sound(stream: AudioStream, position: Vector3 = Vector3.ZERO):
+	var stream_player = AudioStreamPlayer.new()
+	stream_player.stream = stream
+	add_child(stream_player)
+	stream_player.play()
+	stream_player.finished.connect(stream_player.queue_free)

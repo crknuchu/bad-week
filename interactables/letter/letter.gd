@@ -9,3 +9,4 @@ func _ready():
 func on_letter_interacted():
 	Global.player.show_message(text, text.length()/20.0)
 	Global.player.take_letter()
+	queue_free()

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dnfapiv7tjtbq" path="res://models/vesmasina_vesmasina.png" id="1_2fjtr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d8cxd"]
-size = Vector3(1, 1.41809, 1)
+size = Vector3(0.746094, 1.0137, 0.743896)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jsvl"]
 resource_name = "Material"
@@ -49,11 +49,12 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["navmesh"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.697477, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495283, 0)
 shape = SubResource("BoxShape3D_d8cxd")
 
 [node name="vesmasina" type="Node3D" parent="."]
 
 [node name="Cube" type="MeshInstance3D" parent="vesmasina"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 mesh = SubResource("ArrayMesh_tcuj7")
 skeleton = NodePath("")

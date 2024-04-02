@@ -17,10 +17,12 @@ attack_range = 1.0
 follow_range = 50.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679902, 0)
 shape = SubResource("CapsuleShape3D_83dd4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754537, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00737, 0)
+visible = false
 mesh = SubResource("CylinderMesh_el6j2")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
@@ -31,4 +33,4 @@ script = ExtResource("2_tyixo")
 [node name="RayCast3D" type="RayCast3D" parent="."]
 collision_mask = 3
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

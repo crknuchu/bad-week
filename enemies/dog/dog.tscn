@@ -15,9 +15,6 @@ sound = ExtResource("2_3pnsm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.304459, 0)
 shape = SubResource("BoxShape3D_qpimr")
 
-[node name="MeshInstance3D" parent="." index="1"]
-visible = false
-
 [node name="ker" parent="." index="4" instance=ExtResource("2_pc2ur")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 

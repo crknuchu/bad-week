@@ -8,8 +8,8 @@ extends CharacterBody3D
 @export var max_health: float = 100
 @export var has_shovel: bool = false:
 	set(value):
-		shovel.visible = value
 		has_shovel = value
+		shovel.update(has_shovel)
 	get:
 		return has_shovel
 		
@@ -29,28 +29,31 @@ var note_timer: float = 0.0
 @onready var blood_hp_indicator: ColorRect = $HUD/Blood
 @onready var health: float = max_health
 @onready var blood_particle = $BloodParticle
-@onready var shovel_animationplayer = $Camera3D/Shovel/AnimationPlayer
-@onready var shovel: Node3D = $Camera3D/Shovel
+@onready var shovel: Node3D = $HUD/SubViewportContainer/SubViewport/Shovel
 @onready var note_label: Label = $HUD/NoteLabel
-@onready var attack_sound = $attack_sound
-@onready var walk_sound_ground = $walk_sound_ground
-@onready var walk_sound_hallway = $walk_sound_hallway
+
 
 func _ready():
-	shovel.visible = has_shovel
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Global.player = self
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	_update_blood_hp_indicator()
+	_update_shovel()
 
 
 func _physics_process(delta):
 	_process_movement(delta)
-	_process_input()
 
 
 func _process(delta):
 	_process_interacting()
 	_process_note(delta)
+
+
+func _unhandled_input(event):
+	if event is InputEventMouseMotion:
+		camera.rotate_x(-sensitivity*event.relative.y/100.0)
+		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
+		rotate_y(-sensitivity*event.relative.x/100.0)
 
 
 func _process_note(delta):
@@ -64,25 +67,6 @@ func _process_interacting():
 	if Input.is_action_just_pressed("interact") and interact_raycast.is_colliding() and interact_raycast.get_collider() is Interactable:
 		interact()
 
-
-func _process_input():
-	if Input.is_action_just_pressed("attack"):
-		if not shovel_animationplayer.is_playing():
-			attack()
-
-
-func attack():
-	if has_shovel:
-		shovel_animationplayer.play("attack")
-		
-
-
-func deal_damage():
-	for body in attack_hitbox.get_overlapping_bodies():
-		body.hit()
-		blood_particle.emitting = true
-		attack_sound.play()
-
 func _process_movement(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -94,12 +78,6 @@ func _process_movement(delta):
 	var input_dir = Input.get_vector(
 		"move_left", "move_right", "move_forward", "move_backward"
 		)
-	
-	if input_dir != Vector2.ZERO and is_on_floor():
-		if !walk_sound_ground.playing:
-			walk_sound_ground.play()
-	elif walk_sound_ground.playing:
-		walk_sound_ground.play()
 	
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var v1 = Vector2(velocity.x, velocity.z)
@@ -116,12 +94,10 @@ func _process_movement(delta):
 		death()
 
 
-func _unhandled_input(event):
-	if event is InputEventMouseMotion:
-		camera.rotate_x(-sensitivity*event.relative.y/100.0)
-		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
-		rotate_y(-sensitivity*event.relative.x/100.0)
-
+func deal_damage():
+	for body in attack_hitbox.get_overlapping_bodies():
+		body.hit()
+		blood_particle.emitting = true
 
 func interact():
 	var interactable: Interactable = interact_raycast.get_collider()
@@ -142,10 +118,6 @@ func heal(amount: float):
 func death():
 	Global.old_scene = get_tree().current_scene.scene_file_path
 	Transition.transition_to("res://levels/level0/death_room.tscn")
-
-
-func _update_blood_hp_indicator():
-	blood_hp_indicator.material.set("shader_parameter/strength",1.0-health/max_health)
 	
 
 func pick_up_key():
@@ -164,3 +136,11 @@ func show_message(text: String, time: float = 4.0):
 	note_timer = time
 	note_label.visible = true
 	note_label.text = text
+
+
+func _update_shovel():
+	shovel.update(has_shovel)
+
+
+func _update_blood_hp_indicator():
+	blood_hp_indicator.material.set("shader_parameter/strength",1.0-health/max_health)

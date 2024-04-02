@@ -103,13 +103,13 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_34xd1")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eeubi"]
-size = Vector3(1.03125, 2.36755, 1.06934)
+size = Vector3(0.645508, 1.7287, 0.780273)
 
 [node name="frizider" type="Node3D"]
 script = ExtResource("1_uybt4")
 
 [node name="frizider" type="Node3D" parent="."]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 1.18982, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.862291, 0)
 
 [node name="Base" type="MeshInstance3D" parent="frizider" groups=["navmesh"]]
 transform = Transform3D(0.63967, 0, 0, 0, 1.72, 0, 0, 0, 0.76, 0, 0, 0)
@@ -127,7 +127,7 @@ collision_mask = 0
 script = ExtResource("2_eltvd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17015, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.850724, 0)
 shape = SubResource("BoxShape3D_eeubi")
 
 [connection signal="interacted" from="Interactable" to="." method="on_door_interacted"]
