@@ -12,10 +12,6 @@ func _process(delta):
 	pass
 
 
-func _on_door_interact_interacted():
-	Global.player.global_position = $tpMarker.global_position
-
-
 var deaths: int = 0
 
 func _on_mom_died():
@@ -30,3 +26,7 @@ func add_death():
 	if deaths >= 2:
 		await get_tree().create_timer(2.0).timeout
 		Transition.transition_to("res://levels/level3_hodnik/mrtvi.tscn")
+
+
+func _on_vrata_interacted():
+	Global.player.global_position = $tpMarker.global_position

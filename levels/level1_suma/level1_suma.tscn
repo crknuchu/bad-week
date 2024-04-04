@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bjsxmmj6pv1sg"]
+[gd_scene load_steps=30 format=3 uid="uid://bjsxmmj6pv1sg"]
 
 [ext_resource type="Script" path="res://levels/level1_suma/level1_suma.gd" id="1_3vmv5"]
 [ext_resource type="Texture2D" uid="uid://ry2vsqmrmr8u" path="res://textures/d84b1ed4-5589-44ce-8183-f4eacd95267b_scaled_jpg.png" id="1_fcx1a"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bf2j4odbo7gxn" path="res://enemies/rat/rat.tscn" id="19_ppc6l"]
 [ext_resource type="PackedScene" uid="uid://2gb6ohyshfdo" path="res://enemies/dog/dog.tscn" id="20_0hlxs"]
 [ext_resource type="AudioStream" uid="uid://cceffuc2aaphv" path="res://sounds/dog-barking-70772.mp3" id="20_8u351"]
+[ext_resource type="PackedScene" uid="uid://cfpjcksqkfp1" path="res://non_interactables/torch/torch.tscn" id="21_ad86n"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sjht5"]
 panorama = ExtResource("1_fcx1a")
@@ -31,7 +32,7 @@ sky_material = SubResource("PanoramaSkyMaterial_sjht5")
 background_mode = 2
 sky = SubResource("Sky_w6k0r")
 ambient_light_source = 2
-ambient_light_color = Color(0, 0.886275, 1, 1)
+ambient_light_color = Color(0.713726, 1, 0.705882, 1)
 ambient_light_energy = 0.1
 tonemap_mode = 2
 tonemap_exposure = 0.4
@@ -43,7 +44,7 @@ glow_strength = 0.25
 glow_blend_mode = 0
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0905
-volumetric_fog_albedo = Color(0.658824, 0.819608, 1, 1)
+volumetric_fog_albedo = Color(0.811765, 1, 0.823529, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pwuw"]
 albedo_color = Color(0.529412, 0.529412, 0.529412, 1)
@@ -312,7 +313,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7466, 0.139142, -52.0388)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.7295, 0.802792, -46.9673)
 
 [node name="ShovelPickup" parent="Objects" instance=ExtResource("13_c6yii")]
-transform = Transform3D(0.048885, 0.131357, 0.990129, -0.937203, 0.348785, 0, -0.345342, -0.927952, 0.140158, -64.0372, 1.2389, -34.1766)
+transform = Transform3D(0.048885, 0.131357, 0.990129, -0.937203, 0.348785, 0, -0.345342, -0.927952, 0.140158, -64.0372, 1.09108, -34.1006)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 visible = false
@@ -361,6 +362,21 @@ unit_size = 3.85
 pitch_scale = 0.7
 autoplay = true
 max_distance = 500.0
+
+[node name="Torch" parent="." instance=ExtResource("21_ad86n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8117, 0.5, -21.5013)
+
+[node name="Torch2" parent="." instance=ExtResource("21_ad86n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.9137, 0.5, -34.5365)
+
+[node name="Torch3" parent="." instance=ExtResource("21_ad86n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.7312, 0.5, 20.205)
+
+[node name="Torch4" parent="." instance=ExtResource("21_ad86n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0484, 0.5, 26.6991)
+
+[node name="Torch5" parent="." instance=ExtResource("21_ad86n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.8996, 0.5, -9.33517)
 
 [connection signal="entered" from="Objects/exit_door" to="." method="_on_exit_door_entered"]
 [connection signal="noticed_player" from="Enemies/dog" to="Enemies/dog/AmbientBarking" method="queue_free"]

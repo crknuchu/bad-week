@@ -9,9 +9,10 @@ func _ready():
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		camera.rotate_z(-sensitivity*event.relative.y/100.0)
-		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
+		camera.rotate_x(-sensitivity*event.relative.y/100.0)
 		rotate_y(-sensitivity*event.relative.x/100.0)
+		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, 20, 100)
+		rotation_degrees.y = clamp(rotation_degrees.y, -120, -60)
 
 func _process(delta):
 	_process_interacting()

@@ -51,6 +51,7 @@ script = ExtResource("1_4bdd2")
 
 [node name="vrata" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.293636, 0, 0.52953)
+collision_layer = 5
 script = ExtResource("2_867yn")
 
 [node name="Cube" type="MeshInstance3D" parent="vrata"]
