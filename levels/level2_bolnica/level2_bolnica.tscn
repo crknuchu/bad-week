@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c8fpp5wnbkm35" path="res://interactables/key/key.tscn" id="15_760lw"]
 [ext_resource type="PackedScene" uid="uid://cda2v0dih0t1q" path="res://interactables/polica/polica.tscn" id="16_eotqh"]
 [ext_resource type="PackedScene" uid="uid://c7wqreduhy1da" path="res://interactables/exit_door/exit_door.tscn" id="17_yx3ke"]
-[ext_resource type="PackedScene" uid="uid://dappllqlgh0co" path="res://non_interactables/flickering_light.tscn" id="19_sy23e"]
+[ext_resource type="PackedScene" uid="uid://cawxikitjnb88" path="res://non_interactables/flickering_light.tscn" id="19_sy23e"]
 [ext_resource type="PackedScene" uid="uid://brbrncopd8dwc" path="res://interactables/letter/letter.tscn" id="20_atob0"]
 [ext_resource type="Script" path="res://non_interactables/flickering_light.gd" id="20_om8if"]
 
