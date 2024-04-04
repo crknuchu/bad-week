@@ -1,7 +1,7 @@
-[gd_scene load_steps=47 format=3 uid="uid://yi7ovff1ttud"]
+[gd_scene load_steps=47 format=3 uid="uid://dvro7nrxf5qqn"]
 
 [ext_resource type="Texture2D" uid="uid://dchtbnrlw2nfb" path="res://textures/floor.png" id="1_3t5m2"]
-[ext_resource type="Script" path="res://levels/level2_bolnica/level2_bolnica.gd" id="1_17p8i"]
+[ext_resource type="Script" path="res://levels/level2_bolnica/level2_bolnica.gd" id="1_yjhhv"]
 [ext_resource type="Texture2D" uid="uid://bnwydowtiwt7h" path="res://textures/wall.png" id="2_y2oum"]
 [ext_resource type="PackedScene" uid="uid://b33ffx2tmr73u" path="res://player/player.tscn" id="3_s84v3"]
 [ext_resource type="PackedScene" uid="uid://xx16qewpucxt" path="res://enemies/doctor/doctor.tscn" id="4_kcmq5"]
@@ -195,7 +195,7 @@ size = Vector3(3.03, 0.185, 2.04)
 data = PackedVector3Array(-1.515, 0.0925, 1.02, 1.515, 0.0925, 1.02, -1.515, -0.0925, 1.02, 1.515, 0.0925, 1.02, 1.515, -0.0925, 1.02, -1.515, -0.0925, 1.02, 1.515, 0.0925, -1.02, -1.515, 0.0925, -1.02, 1.515, -0.0925, -1.02, -1.515, 0.0925, -1.02, -1.515, -0.0925, -1.02, 1.515, -0.0925, -1.02, 1.515, 0.0925, 1.02, 1.515, 0.0925, -1.02, 1.515, -0.0925, 1.02, 1.515, 0.0925, -1.02, 1.515, -0.0925, -1.02, 1.515, -0.0925, 1.02, -1.515, 0.0925, -1.02, -1.515, 0.0925, 1.02, -1.515, -0.0925, -1.02, -1.515, 0.0925, 1.02, -1.515, -0.0925, 1.02, -1.515, -0.0925, -1.02, 1.515, 0.0925, 1.02, -1.515, 0.0925, 1.02, 1.515, 0.0925, -1.02, -1.515, 0.0925, 1.02, -1.515, 0.0925, -1.02, 1.515, 0.0925, -1.02, -1.515, -0.0925, 1.02, 1.515, -0.0925, 1.02, -1.515, -0.0925, -1.02, 1.515, -0.0925, 1.02, 1.515, -0.0925, -1.02, -1.515, -0.0925, -1.02)
 
 [node name="Level2Bolnica" type="Node3D"]
-script = ExtResource("1_17p8i")
+script = ExtResource("1_yjhhv")
 
 [node name="bolnica_quad" type="Node3D" parent="."]
 

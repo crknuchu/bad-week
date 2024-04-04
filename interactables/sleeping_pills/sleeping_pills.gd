@@ -1,8 +1,10 @@
 extends Node3D
 
 @onready var pills = $Interactible
+@export var delete: bool = false
 
 func _ready():
+	if delete: queue_free()
 	pills.interacted.connect(on_pills_interacted)
 	
 func on_pills_interacted():

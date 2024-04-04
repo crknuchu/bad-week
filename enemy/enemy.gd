@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+signal died
+
+
 @onready var nav_agent = $NavigationAgent3D
 @onready var health: float = max_health
 @onready var blood_splatter = preload("res://non_interactables/blood_splatter/blood_splatter.tscn")
@@ -7,7 +10,7 @@ extends CharacterBody3D
 @onready var vision_raycast: RayCast3D = $RayCast3D
 @onready var audioplayer = $AudioStreamPlayer
 
-const SPEED = 4.0
+@export var SPEED: float = 4.0
 
 @export var attack_range: float = 2.0
 @export var attack_cooldown: float = 3.0
@@ -73,6 +76,7 @@ func attack(damage):
 	Global.player.hit(damage)
 
 func die():
+	died.emit()
 	queue_free()
 	
 func is_dead():

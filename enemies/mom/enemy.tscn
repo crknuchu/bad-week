@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://che60hcngt3xf"]
 
-[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemies/enemy/enemy.tscn" id="1_0t6on"]
+[ext_resource type="PackedScene" uid="uid://bglh3swar8w2a" path="res://enemy/enemy.tscn" id="1_0t6on"]
 [ext_resource type="PackedScene" uid="uid://x7wv7vj2s3tl" path="res://models/mama.glb" id="2_q2213"]
 
-[node name="Enemy" instance=ExtResource("1_0t6on")]
+[node name="Enemy2" instance=ExtResource("1_0t6on")]
 max_health = 1.0
 
 [node name="MeshInstance3D" parent="." index="1"]
